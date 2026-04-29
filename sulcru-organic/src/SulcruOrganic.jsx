@@ -1,0 +1,2 @@
+import { useState } from 'react';
+export default function SulcruOrganic(){return <div className='min-h-screen bg-black text-white p-10'><h1 className='text-6xl text-yellow-400 font-bold'>Sulcru Organic</h1><p className='mt-4'>Premium Organic Agricultural Solutions</p></div>}

@@ -84,7 +84,7 @@ export default function SulcruOrganic() {
   return (
     <div className='min-h-screen font-sans bg-black text-white'>
       <nav className='sticky top-0 z-20 bg-black/90 backdrop-blur border-b border-yellow-500/20 px-6 py-4 flex justify-between items-center'>
-        <button onClick={() => setPage('home')} className='flex items-center gap-3 text-2xl font-bold text-yellow-400'><img src='/mnt/data/Sulcru logo TRANSP2.png' alt='Sulcru Organic Logo' className='w-10 h-10 object-contain' /><span>Sulcru Organic</span></button>
+        <button onClick={() => setPage('home')} className='flex items-center gap-3 text-2xl font-bold text-yellow-400'><img src='https://drive.google.com/uc?export=view&id=1ACeEC7vRnpgLHrkJ0O-euXLZ6U7GZ3T4' alt='Sulcru Organic Logo' className='w-10 h-10 object-contain' /><span>Sulcru Organic</span></button>
         <div className='flex gap-4'>
           <button onClick={() => setPage('home')}>Home</button>
           <button onClick={() => setPage('products')}>Products</button>
@@ -95,7 +95,7 @@ export default function SulcruOrganic() {
       {page === 'home' && (
         <main className='p-10 space-y-10 bg-[radial-gradient(circle_at_top_right,rgba(255,215,0,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,215,0,0.08),transparent_30%)]'>
           <section className='grid md:grid-cols-2 gap-8 items-center'>
-            <div className='text-center md:text-left'><img src='/mnt/data/Sulcru logo TRANSP2.png' alt='Sulcru Organic Logo' className='w-32 h-32 object-contain mx-auto md:mx-0 mb-6 drop-shadow-2xl' /><h1 className='text-6xl font-bold text-yellow-400 mb-4'>Sulcru Organic</h1>
+            <div className='text-center md:text-left'><img src='https://drive.google.com/uc?export=view&id=1ACeEC7vRnpgLHrkJ0O-euXLZ6U7GZ3T4' alt='Sulcru Organic Logo' className='w-32 h-32 object-contain mx-auto md:mx-0 mb-6 drop-shadow-2xl' /><h1 className='text-6xl font-bold text-yellow-400 mb-4'>Sulcru Organic</h1>
             <p className='text-xl text-yellow-400 mb-6'>Premium Organic Agricultural Solutions</p>
             <div className='flex gap-4 justify-center flex-wrap'>
               <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>

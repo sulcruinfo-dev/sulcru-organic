@@ -43,7 +43,7 @@ export default function SulcruOrganic() {
     },
     {
       name: 'Sulcru Insect Repel',
-      image: 'https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.openai.com/static-rsc-4/hu3F6cP_bHCqi2xAxQ76WmtXL2cSPz5rp1gK5SedCvcHVP_DBI53zm62RdpCXx4Lq_OxNP8Jt40pTTniCbbdhGaGvnXJzK_Uq3Jvq9VQfq_qtqOG_dklcrL0BEjTZyAt0hHBhQRgCGr5aPeabBIJQXxDAQyYJZ3Zr-UGwtfg1EgPCNRNwuFbVV5Sye6wTf_Z?purpose=fullsize',
       desc: 'Natural insect repellent designed to protect crops without harming plants or beneficial biology.',
       benefits: [
         'Repels a wide range of common crop pests',
@@ -68,7 +68,7 @@ export default function SulcruOrganic() {
         'Test on a small area before full application'
       ]
     }
-  ];;
+  ];
 
   const card = 'bg-zinc-950 rounded-3xl shadow-2xl border border-yellow-500/20';
   const soft = 'bg-zinc-900 rounded-2xl border border-yellow-500/20';
@@ -103,7 +103,10 @@ export default function SulcruOrganic() {
   return (
     <div className='min-h-screen font-sans bg-black text-white'>
       <nav className='sticky top-0 z-20 bg-black/90 backdrop-blur border-b border-yellow-500/20 px-6 py-4 flex justify-between items-center'>
-        <button onClick={() => setPage('home')} className='flex items-center gap-3 text-2xl font-bold text-yellow-400'><img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' alt='Sulcru Organic Logo' className='w-10 h-10 object-contain' /><span>Sulcru Organic</span></button>
+        <button onClick={() => setPage('home')} className='flex items-center gap-3 text-2xl font-bold text-yellow-400'>
+          <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-10 h-10 object-contain' />
+          <span>Sulcru Organic</span>
+        </button>
         <div className='flex gap-4'>
           <button onClick={() => setPage('home')}>Home</button>
           <button onClick={() => setPage('products')}>Products</button>
@@ -113,18 +116,31 @@ export default function SulcruOrganic() {
 
       {page === 'home' && (
         <main className='p-10 space-y-10 bg-[radial-gradient(circle_at_top_right,rgba(255,215,0,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,215,0,0.08),transparent_30%)]'>
+          <p className='text-xl text-yellow-400 text-center'>Premium Organic Agricultural Solutions</p>
           <section className='grid md:grid-cols-2 gap-8 items-center'>
-            <div className='text-center md:text-left'><img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' alt='Sulcru Organic Logo' className='w-32 h-32 object-contain mx-auto md:mx-0 mb-6 drop-shadow-2xl' /><h1 className='text-6xl font-bold text-yellow-400 mb-4'>Sulcru Organic</h1>
-            <p className='text-xl text-yellow-400 mb-6'>Premium Organic Agricultural Solutions</p>
-            <div className='flex gap-4 justify-center flex-wrap'>
-              <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>
-              <button onClick={() => setPage('products')} className='px-6 py-3 rounded-2xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black'>View Products</button>
-              <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>WhatsApp</a>
+            <div className='text-center'>
+              <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-[24rem] h-[24rem] object-contain mx-auto mb-6 drop-shadow-2xl' />
+              
+              
+              <div className='flex gap-4 justify-center flex-wrap'>
+                <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>
+                <button onClick={() => setPage('products')} className='px-6 py-3 rounded-2xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black'>View Products</button>
+                <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>WhatsApp</a>
+              </div>
             </div>
-          </div><div className='rounded-3xl overflow-hidden shadow-2xl min-h-[420px] bg-cover bg-center border border-yellow-500/20' style={{ backgroundImage: "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1400&q=80')" }}></div></section><section className='max-w-4xl mx-auto'>
+            <div className='rounded-3xl overflow-hidden shadow-2xl min-h-[420px] border border-yellow-500/20'>
+              <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/WS8LS4W0zblKmnAuu0v1/image.jpg' className='w-full h-full object-cover' />
+            </div>
+            
+          </section>
+
+          <section className='max-w-4xl mx-auto'>
             <div className={`${card} p-8`}>
               <h2 className='text-3xl font-semibold mb-4'>About Us</h2>
-              <p className='mb-4'>Sulcru Organic is dedicated to supplying premium organic agricultural solutions that improve soil health, strengthen plant development, and support long-term sustainable productivity across all farming systems.</p><p className='mb-4'>Our products are developed for commercial farms, nurseries, home growers, landscapers, and agricultural operations seeking reliable performance through environmentally responsible methods.</p><p className='mb-4'>We focus on restoring natural balance in the soil, enhancing crop vitality, and helping growers achieve stronger yields with healthier land stewardship.</p><p>With a commitment to quality, innovation, and practical field results, Sulcru Organic aims to be a trusted partner in modern regenerative agriculture.</p>
+              <p className='mb-4'>Sulcru Organic is dedicated to supplying premium organic agricultural solutions that improve soil health, strengthen plant development, and support long-term sustainable productivity across all farming systems.</p>
+              <p className='mb-4'>Our products are developed for commercial farms, nurseries, home growers, landscapers, and agricultural operations seeking reliable performance through environmentally responsible methods.</p>
+              <p className='mb-4'>We focus on restoring natural balance in the soil, enhancing crop vitality, and helping growers achieve stronger yields with healthier land stewardship.</p>
+              <p>With a commitment to quality, innovation, and practical field results, Sulcru Organic aims to be a trusted partner in modern regenerative agriculture.</p>
             </div>
           </section>
         </main>
@@ -175,6 +191,7 @@ export default function SulcruOrganic() {
             <div className='p-8'>
               <h1 className='text-5xl font-bold mb-4'>{selectedProduct.name}</h1>
               <p className='text-xl mb-6'>{selectedProduct.desc}</p>
+
               <div className='grid md:grid-cols-2 gap-6 mb-8'>
                 <div className={`${soft} p-5`}>
                   <h3 className='text-xl font-semibold mb-3'>Key Benefits</h3>
@@ -182,17 +199,20 @@ export default function SulcruOrganic() {
                     {selectedProduct.benefits.map((b) => <li key={b}>{b}</li>)}
                   </ul>
                 </div>
+
                 <div className={`${soft} p-5`}>
                   <h3 className='text-xl font-semibold mb-3'>Recommended Use</h3>
                   <p>{selectedProduct.use}</p>
                 </div>
               </div>
+
               <div className={`${soft} p-5 mb-8`}>
                 <h3 className='text-xl font-semibold mb-3'>Performance</h3>
                 <ul className='list-disc pl-5 space-y-2'>
                   {selectedProduct.performance.map((b) => <li key={b}>{b}</li>)}
                 </ul>
               </div>
+
               {selectedProduct.name === 'Compost Boost' && (
                 <div className={`${soft} p-5 mb-8`}>
                   <h3 className='text-xl font-semibold mb-3'>Recommended Dilutions</h3>
@@ -226,6 +246,7 @@ export default function SulcruOrganic() {
                   </div>
                 </>
               )}
+
               <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>
             </div>
           </div>
@@ -235,7 +256,7 @@ export default function SulcruOrganic() {
       {showQuote && (
         <div className='fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4'>
           <div className='bg-zinc-950 text-white rounded-3xl shadow-2xl border border-yellow-500/20 max-w-xl w-full p-8 relative'>
-            <button onClick={() => setShowQuote(false)} className='absolute top-4 right-4 text-zinc-400 hover:text-yellow-400 text-2xl leading-none'>×</button>
+            <button onClick={() => setShowQuote(false)} className='absolute top-4 right-4 text-zinc-400 hover:text-yellow-400 text-2xl'>×</button>
             <h3 className='text-3xl font-bold text-yellow-400 mb-2'>Request a Quote</h3>
             <p className='text-zinc-400 mb-6'>Tell us what you need and we will contact you promptly.</p>
             <QuoteForm />
@@ -243,7 +264,9 @@ export default function SulcruOrganic() {
         </div>
       )}
 
-      <footer className='px-10 py-10 text-center text-sm text-zinc-400 border-t border-yellow-500/20 bg-black'>Sulcru Organic © 2026 • Belfast, South Africa</footer>
+      <footer className='px-10 py-10 text-center text-sm text-zinc-400 border-t border-yellow-500/20 bg-black'>
+        Sulcru Organic © 2026 • Belfast, South Africa
+      </footer>
     </div>
   );
 }

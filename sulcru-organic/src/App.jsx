@@ -76,6 +76,12 @@ export default function SulcruOrganic() {
   function openProduct(product) {
     setSelectedProduct(product);
     setPage('product');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function navigateTo(pageName) {
+    setPage(pageName);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function submitQuote(e) {
@@ -102,53 +108,106 @@ export default function SulcruOrganic() {
 
   return (
     <div className='min-h-screen font-sans bg-black text-white'>
-      <nav className='sticky top-0 z-20 bg-black/90 backdrop-blur border-b border-yellow-500/20 px-6 py-4 flex justify-between items-center'>
-        <button onClick={() => setPage('home')} className='flex items-center gap-3 text-2xl font-bold text-yellow-400'>
-          <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-10 h-10 object-contain' />
-          <span>Sulcru Organic</span>
+      <nav className='sticky top-0 z-20 bg-black/95 backdrop-blur border-b border-yellow-500/10 px-8 py-5 flex justify-between items-center'>
+        <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
+          <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-20 h-20 object-contain drop-shadow-2xl' />
         </button>
-        <div className='flex gap-4'>
-          <button onClick={() => setPage('home')}>Home</button>
-          <button onClick={() => setPage('products')}>Products</button>
-          <button onClick={() => setPage('contact')}>Contact</button>
+
+        <div className='hidden md:flex gap-10 text-sm font-semibold tracking-wide uppercase'>
+          <button onClick={() => navigateTo('home')} className={`hover:text-yellow-400 transition pb-1 ${page === 'home' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Home</button>
+          <button onClick={() => navigateTo('about')} className={`hover:text-yellow-400 transition pb-1 ${page === 'about' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>About Us</button>
+          <button onClick={() => navigateTo('products')} className={`hover:text-yellow-400 transition pb-1 ${page === 'products' || page === 'product' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Shop</button>
+          <button onClick={() => navigateTo('ingredients')} className={`hover:text-yellow-400 transition pb-1 ${page === 'ingredients' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Ingredients</button>
+          <button onClick={() => navigateTo('benefits')} className={`hover:text-yellow-400 transition pb-1 ${page === 'benefits' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Benefits</button>
+          <button onClick={() => navigateTo('contact')} className={`hover:text-yellow-400 transition pb-1 ${page === 'contact' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Contact</button>
+        </div>
+
+        <div className='flex items-center gap-5'>
+          <button onClick={() => navigateTo('products')} className='px-6 py-3 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-400 hover:text-black transition font-semibold'>SHOP NOW →</button>
         </div>
       </nav>
 
       {page === 'home' && (
-        <main className='p-10 space-y-10 bg-[radial-gradient(circle_at_top_right,rgba(255,215,0,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(255,215,0,0.08),transparent_30%)]'>
-          <p className='text-xl text-yellow-400 text-center'>Premium Organic Agricultural Solutions</p>
-          <section className='grid md:grid-cols-2 gap-8 items-center'>
-            <div className='text-center'>
-              <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-[24rem] h-[24rem] object-contain mx-auto mb-6 drop-shadow-2xl' />
-              
-              
-              <div className='flex gap-4 justify-center flex-wrap'>
-                <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>
-                <button onClick={() => setPage('products')} className='px-6 py-3 rounded-2xl border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black'>View Products</button>
-                <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>WhatsApp</a>
+        <main className='overflow-hidden bg-black'>
+          <section className='relative min-h-[92vh] border-b border-yellow-500/10 bg-[radial-gradient(circle_at_center,rgba(255,215,0,0.18),transparent_30%),linear-gradient(to_right,#000000,#050505,#000000)]'>
+            <div className='absolute inset-0 opacity-20 bg-[url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1800&q=80)] bg-cover bg-center'></div>
+
+            <div className='relative z-10 grid lg:grid-cols-2 gap-10 items-center px-10 lg:px-20 py-16 lg:py-24'>
+              <div className='max-w-2xl'>
+                <p className='text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-6 text-sm'>Pure By Nature. Powered By Science.</p>
+
+                <h1 className='text-5xl md:text-7xl font-black leading-[0.95] mb-8'>
+                  Premium Organic
+                  <br />
+                  Agricultural Solutions
+                  <br />
+                  <span className='text-yellow-400'>for Better Growth</span>
+                </h1>
+
+                <p className='text-zinc-300 text-xl leading-relaxed max-w-xl mb-10'>
+                  High-performance organic agricultural products developed to improve soil health, strengthen plant development, increase crop productivity, and support sustainable farming systems.
+                </p>
+
+                <div className='flex flex-wrap gap-5'>
+                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>SHOP NOW →</button>
+
+                  <button onClick={() => navigateTo('products')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
+                </div>
+              </div>
+
+              <div className='relative flex justify-center items-center'>
+                <div className='absolute w-[32rem] h-[32rem] rounded-full bg-yellow-400/20 blur-3xl'></div>
+
+                <img
+                  src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
+                  className='relative z-10 w-full max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
+                />
               </div>
             </div>
-            <div className='rounded-3xl overflow-hidden shadow-2xl min-h-[420px] border border-yellow-500/20'>
-              <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/WS8LS4W0zblKmnAuu0v1/image.jpg' className='w-full h-full object-cover' />
+
+            <div className='relative z-10 px-6 lg:px-20 pb-14'>
+              <div className='grid md:grid-cols-4 gap-6 border border-yellow-500/20 rounded-3xl bg-zinc-950/90 backdrop-blur p-8'>
+                <div className='flex items-start gap-4'>
+                  <div className='w-14 h-14 rounded-full border border-yellow-500 flex items-center justify-center text-yellow-400 text-2xl'>🌿</div>
+                  <div>
+                    <h3 className='font-bold text-lg mb-1'>100% Organic</h3>
+                    <p className='text-zinc-400 text-sm'>Pure, natural & chemical-free agricultural support.</p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-4'>
+                  <div className='w-14 h-14 rounded-full border border-yellow-500 flex items-center justify-center text-yellow-400 text-2xl'>🧪</div>
+                  <div>
+                    <h3 className='font-bold text-lg mb-1'>Science Backed</h3>
+                    <p className='text-zinc-400 text-sm'>Formulated for real agricultural field performance.</p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-4'>
+                  <div className='w-14 h-14 rounded-full border border-yellow-500 flex items-center justify-center text-yellow-400 text-2xl'>🛡️</div>
+                  <div>
+                    <h3 className='font-bold text-lg mb-1'>Field Tested</h3>
+                    <p className='text-zinc-400 text-sm'>Designed for commercial farms, nurseries, and growers.</p>
+                  </div>
+                </div>
+
+                <div className='flex items-start gap-4'>
+                  <div className='w-14 h-14 rounded-full border border-yellow-500 flex items-center justify-center text-yellow-400 text-2xl'>♻️</div>
+                  <div>
+                    <h3 className='font-bold text-lg mb-1'>Sustainable</h3>
+                    <p className='text-zinc-400 text-sm'>Supports regenerative and environmentally responsible farming.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
           </section>
 
-          <section className='max-w-4xl mx-auto'>
-            <div className={`${card} p-8`}>
-              <h2 className='text-3xl font-semibold mb-4'>About Us</h2>
-              <p className='mb-4'>Sulcru Organic is dedicated to supplying premium organic agricultural solutions that improve soil health, strengthen plant development, and support long-term sustainable productivity across all farming systems.</p>
-              <p className='mb-4'>Our products are developed for commercial farms, nurseries, home growers, landscapers, and agricultural operations seeking reliable performance through environmentally responsible methods.</p>
-              <p className='mb-4'>We focus on restoring natural balance in the soil, enhancing crop vitality, and helping growers achieve stronger yields with healthier land stewardship.</p>
-              <p>With a commitment to quality, innovation, and practical field results, Sulcru Organic aims to be a trusted partner in modern regenerative agriculture.</p>
-            </div>
-          </section>
-        </main>
+          </main>
       )}
 
       {page === 'products' && (
         <main className='p-10'>
-          <button onClick={() => setPage('home')} className='mb-6 px-4 py-2 border rounded-xl'>← Back Home</button>
+          <button onClick={() => navigateTo('home')} className='mb-6 px-4 py-2 border rounded-xl'>← Back Home</button>
           <h1 className='text-5xl font-bold mb-8'>Our Product Range</h1>
           <div className='grid md:grid-cols-2 gap-6'>
             {products.map((p) => (
@@ -164,9 +223,111 @@ export default function SulcruOrganic() {
         </main>
       )}
 
+      {page === 'about' && (
+        <main className='bg-black min-h-screen px-6 lg:px-12 py-20'>
+          <div className='max-w-7xl mx-auto'>
+            <button onClick={() => navigateTo('home')} className='mb-10 px-5 py-3 border border-yellow-500/30 rounded-2xl hover:border-yellow-400 hover:text-yellow-400 transition'>← Back Home</button>
+
+            <div className={`${card} p-10 lg:p-14`}>
+              <h1 className='text-5xl lg:text-6xl font-black mb-10 text-white'>About Sulcru Organic</h1>
+
+              <div className='grid lg:grid-cols-2 gap-12 items-center'>
+                <div>
+                  <img
+                    src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
+                    className='w-full max-w-2xl mx-auto object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.25)]'
+                  />
+                </div>
+
+                <div className='text-zinc-300 leading-relaxed text-lg space-y-6'>
+                  <p>
+                    Sulcru Organic supplies premium organic agricultural products developed to support healthier soils, stronger plant growth, improved crop resilience, and sustainable long-term productivity.
+                  </p>
+
+                  <p>
+                    Our solutions are trusted by commercial farms, nurseries, landscapers, home growers, and agricultural operations seeking effective organic performance with modern regenerative practices.
+                  </p>
+
+                  <p>
+                    We focus on restoring natural balance within agricultural systems through biologically supportive formulations that work alongside nature rather than against it.
+                  </p>
+
+                  <p>
+                    With a commitment to quality, consistency, and practical field results, Sulcru Organic continues building reliable agricultural solutions for modern farming environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      )}
+
+      {page === 'ingredients' && (
+        <main className='bg-black min-h-screen px-6 lg:px-12 py-20'>
+          <div className='max-w-7xl mx-auto'>
+            <button onClick={() => navigateTo('home')} className='mb-10 px-5 py-3 border border-yellow-500/30 rounded-2xl hover:border-yellow-400 hover:text-yellow-400 transition'>← Back Home</button>
+
+            <div className={`${card} p-10 lg:p-14`}>
+              <h1 className='text-5xl lg:text-6xl font-black mb-10 text-white'>Ingredients & Formulation Philosophy</h1>
+
+              <div className='grid lg:grid-cols-3 gap-8'>
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-2xl font-bold text-yellow-400 mb-4'>Organic Inputs</h3>
+                  <p className='text-zinc-300 leading-relaxed'>Sulcru Organic products are developed using carefully selected organic-compatible ingredients designed to support soil biology, plant vitality, and sustainable agricultural systems.</p>
+                </div>
+
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-2xl font-bold text-yellow-400 mb-4'>Biological Support</h3>
+                  <p className='text-zinc-300 leading-relaxed'>Our formulations are designed to work alongside natural biological processes to improve nutrient cycling, soil activity, plant resilience, and overall crop performance.</p>
+                </div>
+
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-2xl font-bold text-yellow-400 mb-4'>Sustainable Agriculture</h3>
+                  <p className='text-zinc-300 leading-relaxed'>We prioritise environmentally responsible agricultural practices that support long-term soil health, reduced chemical dependency, and regenerative farming principles.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      )}
+
+      {page === 'benefits' && (
+        <main className='bg-black min-h-screen px-6 lg:px-12 py-20'>
+          <div className='max-w-7xl mx-auto'>
+            <button onClick={() => navigateTo('home')} className='mb-10 px-5 py-3 border border-yellow-500/30 rounded-2xl hover:border-yellow-400 hover:text-yellow-400 transition'>← Back Home</button>
+
+            <div className={`${card} p-10 lg:p-14`}>
+              <h1 className='text-5xl lg:text-6xl font-black mb-10 text-white'>Why Choose Sulcru Organic</h1>
+
+              <div className='grid lg:grid-cols-2 gap-8'>
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-3xl font-bold text-yellow-400 mb-4'>Healthier Soil Systems</h3>
+                  <p className='text-zinc-300 leading-relaxed text-lg'>Our products are developed to support soil biology, improve nutrient availability, and encourage healthier root-zone environments for long-term agricultural sustainability.</p>
+                </div>
+
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-3xl font-bold text-yellow-400 mb-4'>Improved Plant Performance</h3>
+                  <p className='text-zinc-300 leading-relaxed text-lg'>Sulcru Organic formulations help support stronger vegetative growth, improved resilience, and more consistent crop development throughout the growing cycle.</p>
+                </div>
+
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-3xl font-bold text-yellow-400 mb-4'>Organic & Regenerative Focus</h3>
+                  <p className='text-zinc-300 leading-relaxed text-lg'>We prioritise environmentally responsible agricultural practices that align with regenerative farming systems and sustainable crop production.</p>
+                </div>
+
+                <div className={`${soft} p-8`}>
+                  <h3 className='text-3xl font-bold text-yellow-400 mb-4'>Trusted Across Farming Systems</h3>
+                  <p className='text-zinc-300 leading-relaxed text-lg'>Our solutions are suitable for commercial farms, nurseries, home growers, landscaping applications, and a wide range of agricultural environments.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      )}
+
       {page === 'contact' && (
         <main className='p-10'>
-          <button onClick={() => setPage('home')} className='mb-6 px-4 py-2 border rounded-xl'>← Back Home</button>
+          <button onClick={() => navigateTo('home')} className='mb-6 px-4 py-2 border rounded-xl'>← Back Home</button>
           <div className={`${card} max-w-4xl mx-auto p-8`}>
             <h1 className='text-5xl font-bold mb-6'>Contact Us</h1>
             <p>Phone / WhatsApp: 061 514 1042</p>
@@ -183,8 +344,8 @@ export default function SulcruOrganic() {
       {page === 'product' && selectedProduct && (
         <main className='p-10'>
           <div className='flex gap-3 mb-6'>
-            <button onClick={() => setPage('products')} className='px-4 py-2 border rounded-xl'>← Back to Products</button>
-            <button onClick={() => setPage('home')} className='px-4 py-2 border rounded-xl'>Home</button>
+            <button onClick={() => navigateTo('products')} className='px-4 py-2 border rounded-xl'>← Back to Products</button>
+            <button onClick={() => navigateTo('home')} className='px-4 py-2 border rounded-xl'>Home</button>
           </div>
           <div className={`${card} max-w-4xl mx-auto overflow-hidden`}>
             <div className='h-72 bg-cover bg-center' style={{ backgroundImage: `url(${selectedProduct.image})` }} />

@@ -1,9 +1,11 @@
+'use client';
+
 import { useState } from 'react';
 
 export default function SulcruOrganic() {
   const [page, setPage] = useState('home');
   const [showQuote, setShowQuote] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
 
   const email = 'sulcru.info@gmail.com';
   const phone = '27615141042';
@@ -110,7 +112,9 @@ export default function SulcruOrganic() {
     <div className='min-h-screen font-sans bg-black text-white'>
       <nav className='sticky top-0 z-20 bg-black/95 backdrop-blur border-b border-yellow-500/10 px-8 py-5 flex justify-between items-center'>
         <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
-          <img src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png' className='w-20 h-20 object-contain drop-shadow-2xl' />
+          <img
+                    src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
+                    alt='About Sulcru Organic' alt='Sulcru Organic Logo' className='w-20 h-20 object-contain drop-shadow-2xl' />
         </button>
 
         <div className='hidden md:flex gap-10 text-sm font-semibold tracking-wide uppercase'>
@@ -160,6 +164,7 @@ export default function SulcruOrganic() {
 
                 <img
                   src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
+                  alt='Sulcru Organic Premium Agriculture'
                   className='relative z-10 w-full max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
                 />
               </div>

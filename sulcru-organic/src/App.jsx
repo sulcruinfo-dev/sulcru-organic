@@ -149,9 +149,9 @@ export default function SulcruOrganic() {
                 </p>
 
                 <div className='flex flex-wrap gap-5'>
-                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>SHOP NOW →</button>
+                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button>
 
-                  <button onClick={() => navigateTo('products')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
+                  <button onClick={() => navigateTo('benefits')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
                 </div>
               </div>
 
@@ -202,7 +202,61 @@ export default function SulcruOrganic() {
             </div>
           </section>
 
-          </main>
+          <section className='px-6 lg:px-20 py-20 bg-gradient-to-b from-black to-zinc-950 border-t border-yellow-500/10'>
+            <div className='text-center mb-12'>
+              <p className='text-yellow-400 uppercase tracking-[0.3em] text-sm font-semibold mb-4'>Real Agricultural Results</p>
+              <h2 className='text-4xl lg:text-5xl font-black'>Results From Healthy Soil & Stronger Growth</h2>
+            </div>
+
+            <div className='overflow-x-auto pb-4'>
+              <div className='flex gap-8 min-w-max'>
+                {[
+                  {
+                    title: 'Improved Vegetable Growth',
+                    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
+                    text: 'Healthier crop development supported through biologically balanced growing systems.'
+                  },
+                  {
+                    title: 'Stronger Root Zones',
+                    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80',
+                    text: 'Improved soil vitality contributes to stronger plant establishment and resilience.'
+                  },
+                  {
+                    title: 'Healthier Crop Production',
+                    image: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=80',
+                    text: 'Balanced agricultural support for vigorous crop performance and productivity.'
+                  },
+                  {
+                    title: 'Improved Soil Performance',
+                    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80',
+                    text: 'Enhanced biological activity and healthier growing environments.'
+                  }
+                ].map((slide) => (
+                  <div
+                    key={slide.title}
+                    className='group relative w-[340px] overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-950 text-left hover:border-yellow-400/60 transition'
+                  >
+                    <div
+                      className='h-72 bg-cover bg-center transition duration-500 group-hover:scale-105'
+                      style={{ backgroundImage: `url(${slide.image})` }}
+                    />
+
+                    <div className='p-6'>
+                      <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-yellow-400 transition'>
+                        {slide.title}
+                      </h3>
+
+                      <p className='text-zinc-400 leading-relaxed'>
+                        {slide.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+        </main>
       )}
 
       {page === 'products' && (

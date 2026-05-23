@@ -114,7 +114,7 @@ export default function SulcruOrganic() {
         <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
           <img
                     src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
-                    alt='About Sulcru Organic' alt='Sulcru Organic Logo' className='w-20 h-20 object-contain drop-shadow-2xl' />
+                    alt='Sulcru Organic Logo' className='w-20 h-20 object-contain drop-shadow-2xl' />
         </button>
 
         <div className='hidden md:flex gap-10 text-sm font-semibold tracking-wide uppercase'>
@@ -294,6 +294,7 @@ export default function SulcruOrganic() {
                 <div>
                   <img
                     src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
+                    alt='About Sulcru Organic'
                     className='w-full max-w-2xl mx-auto object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.25)]'
                   />
                 </div>

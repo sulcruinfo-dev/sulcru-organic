@@ -5,8 +5,8 @@ import { useState } from 'react';
 export default function SulcruOrganic() {
   const [page, setPage] = useState('home');
   const [showQuote, setShowQuote] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
-
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  
   const email = 'sulcru.info@gmail.com';
   const phone = '27615141042';
 

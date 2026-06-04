@@ -147,7 +147,7 @@ export default function SulcruOrganic() {
               <div className='max-w-2xl'>
                 <p className='text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-6 text-sm'>Pure By Nature. Powered By Science.</p>
 
-                <h1 className='text-5xl md:text-7xl font-black leading-[0.95] mb-8'>
+                <h1 className='text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] mb-6 md:mb-8 text-center lg:text-left'>
                   Premium Organic
                   <br />
                   Agricultural Solutions
@@ -155,11 +155,11 @@ export default function SulcruOrganic() {
                   <span className='text-yellow-400'>for Better Growth</span>
                 </h1>
 
-                <p className='text-zinc-300 text-xl leading-relaxed max-w-xl mb-10'>
+                <p className='text-zinc-300 text-lg md:text-xl leading-relaxed max-w-xl mb-8 md:mb-10 text-center lg:text-left'>
                   High-performance organic agricultural products developed to improve soil health, strengthen plant development, increase crop productivity, and support sustainable farming systems.
                 </p>
 
-                <div className='flex flex-wrap gap-5'>
+                <div className='flex flex-col sm:flex-row gap-4 sm:gap-5 items-center lg:items-start'>
                   <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button>
 
                   <button onClick={() => navigateTo('benefits')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
@@ -172,7 +172,7 @@ export default function SulcruOrganic() {
                 <img
                   src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
                   alt='Sulcru Organic Premium Agriculture'
-                  className='relative z-10 w-full max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
+                  className='relative z-10 w-full max-w-sm sm:max-w-lg lg:max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
                 />
               </div>
             </div>

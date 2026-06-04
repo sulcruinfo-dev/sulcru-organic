@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function SulcruOrganic() {
   const [page, setPage] = useState('home');
   const [showQuote, setShowQuote] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   
   const email = 'sulcru.info@gmail.com';
@@ -126,8 +127,14 @@ export default function SulcruOrganic() {
           <button onClick={() => navigateTo('contact')} className={`hover:text-yellow-400 transition pb-1 ${page === 'contact' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Contact</button>
         </div>
 
-        <div className='flex items-center gap-5'>
-          <button onClick={() => navigateTo('products')} className='px-6 py-3 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-400 hover:text-black transition font-semibold'>SHOP NOW →</button>
+        <div className='flex items-center gap-3'>
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className='md:hidden text-yellow-400 text-3xl px-2'
+          >
+            ☰
+          </button>
+          <button onClick={() => navigateTo('products')} className='hidden md:block px-6 py-3 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-400 hover:text-black transition font-semibold'>SHOP NOW →</button>
         </div>
       </nav>
 
@@ -483,6 +490,24 @@ export default function SulcruOrganic() {
             <QuoteForm />
           </div>
         </div>
+      )}
+
+
+      {mobileMenuOpen && (
+        <>
+          <div className='fixed inset-0 bg-black/70 z-40' onClick={() => setMobileMenuOpen(false)} />
+          <div className='fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black border-l border-yellow-500/20 z-50 p-8'>
+            <button onClick={() => setMobileMenuOpen(false)} className='text-3xl text-yellow-400 mb-8'>×</button>
+            <div className='flex flex-col gap-6 text-lg uppercase font-semibold'>
+              <button onClick={() => {navigateTo('home'); setMobileMenuOpen(false);}}>Home</button>
+              <button onClick={() => {navigateTo('about'); setMobileMenuOpen(false);}}>About Us</button>
+              <button onClick={() => {navigateTo('products'); setMobileMenuOpen(false);}}>Shop</button>
+              <button onClick={() => {navigateTo('ingredients'); setMobileMenuOpen(false);}}>Ingredients</button>
+              <button onClick={() => {navigateTo('benefits'); setMobileMenuOpen(false);}}>Benefits</button>
+              <button onClick={() => {navigateTo('contact'); setMobileMenuOpen(false);}}>Contact</button>
+            </div>
+          </div>
+        </>
       )}
 
       <footer className='px-10 py-10 text-center text-sm text-zinc-400 border-t border-yellow-500/20 bg-black'>

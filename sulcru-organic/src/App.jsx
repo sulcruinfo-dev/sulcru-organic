@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function SulcruOrganic() {
   const [page, setPage] = useState('home');
   const [showQuote, setShowQuote] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   
   const email = 'sulcru.info@gmail.com';
@@ -126,8 +127,14 @@ export default function SulcruOrganic() {
           <button onClick={() => navigateTo('contact')} className={`hover:text-yellow-400 transition pb-1 ${page === 'contact' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Contact</button>
         </div>
 
-        <div className='flex items-center gap-5'>
-          <button onClick={() => navigateTo('products')} className='px-6 py-3 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-400 hover:text-black transition font-semibold'>SHOP NOW →</button>
+        <div className='flex items-center gap-3'>
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className='md:hidden text-yellow-400 text-3xl px-2'
+          >
+            ☰
+          </button>
+          <button onClick={() => navigateTo('products')} className='hidden md:block px-6 py-3 rounded-2xl border border-yellow-500 text-yellow-400 hover:bg-yellow-400 hover:text-black transition font-semibold'>SHOP NOW →</button>
         </div>
       </nav>
 
@@ -140,7 +147,7 @@ export default function SulcruOrganic() {
               <div className='max-w-2xl'>
                 <p className='text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-6 text-sm'>Pure By Nature. Powered By Science.</p>
 
-                <h1 className='text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] mb-6 md:mb-8 text-center lg:text-left'>
+                <h1 className='text-5xl md:text-7xl font-black leading-[0.95] mb-8'>
                   Premium Organic
                   <br />
                   Agricultural Solutions
@@ -148,11 +155,11 @@ export default function SulcruOrganic() {
                   <span className='text-yellow-400'>for Better Growth</span>
                 </h1>
 
-                <p className='text-zinc-300 text-lg md:text-xl leading-relaxed max-w-xl mb-8 md:mb-10 text-center lg:text-left'>
+                <p className='text-zinc-300 text-xl leading-relaxed max-w-xl mb-10'>
                   High-performance organic agricultural products developed to improve soil health, strengthen plant development, increase crop productivity, and support sustainable farming systems.
                 </p>
 
-                <div className='flex flex-col sm:flex-row gap-4 sm:gap-5 items-center lg:items-start'>
+                <div className='flex flex-wrap gap-5'>
                   <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button>
 
                   <button onClick={() => navigateTo('benefits')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
@@ -165,7 +172,7 @@ export default function SulcruOrganic() {
                 <img
                   src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
                   alt='Sulcru Organic Premium Agriculture'
-                  className='relative z-10 w-full max-w-sm sm:max-w-lg lg:max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
+                  className='relative z-10 w-full max-w-3xl object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.35)]'
                 />
               </div>
             </div>
@@ -483,6 +490,24 @@ export default function SulcruOrganic() {
             <QuoteForm />
           </div>
         </div>
+      )}
+
+
+      {mobileMenuOpen && (
+        <>
+          <div className='fixed inset-0 bg-black/70 z-40' onClick={() => setMobileMenuOpen(false)} />
+          <div className='fixed top-0 right-0 h-full w-[80%] max-w-sm bg-black border-l border-yellow-500/20 z-50 p-8'>
+            <button onClick={() => setMobileMenuOpen(false)} className='text-3xl text-yellow-400 mb-8'>×</button>
+            <div className='flex flex-col gap-6 text-lg uppercase font-semibold'>
+              <button onClick={() => {navigateTo('home'); setMobileMenuOpen(false);}}>Home</button>
+              <button onClick={() => {navigateTo('about'); setMobileMenuOpen(false);}}>About Us</button>
+              <button onClick={() => {navigateTo('products'); setMobileMenuOpen(false);}}>Shop</button>
+              <button onClick={() => {navigateTo('ingredients'); setMobileMenuOpen(false);}}>Ingredients</button>
+              <button onClick={() => {navigateTo('benefits'); setMobileMenuOpen(false);}}>Benefits</button>
+              <button onClick={() => {navigateTo('contact'); setMobileMenuOpen(false);}}>Contact</button>
+            </div>
+          </div>
+        </>
       )}
 
       <footer className='px-10 py-10 text-center text-sm text-zinc-400 border-t border-yellow-500/20 bg-black'>

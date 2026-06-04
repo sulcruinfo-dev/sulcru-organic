@@ -121,7 +121,7 @@ export default function SulcruOrganic() {
         <div className='hidden md:flex gap-10 text-sm font-semibold tracking-wide uppercase'>
           <button onClick={() => navigateTo('home')} className={`hover:text-yellow-400 transition pb-1 ${page === 'home' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Home</button>
           <button onClick={() => navigateTo('about')} className={`hover:text-yellow-400 transition pb-1 ${page === 'about' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>About Us</button>
-          <button onClick={() => navigateTo('products')} className={`hover:text-yellow-400 transition pb-1 ${page === 'products' || page === 'product' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Shop</button>
+          <button onClick={() => navigateTo('benefits')} className={`hover:text-yellow-400 transition pb-1 ${page === 'products' || page === 'product' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Shop</button>
           <button onClick={() => navigateTo('ingredients')} className={`hover:text-yellow-400 transition pb-1 ${page === 'ingredients' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Ingredients</button>
           <button onClick={() => navigateTo('benefits')} className={`hover:text-yellow-400 transition pb-1 ${page === 'benefits' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Benefits</button>
           <button onClick={() => navigateTo('contact')} className={`hover:text-yellow-400 transition pb-1 ${page === 'contact' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Contact</button>
@@ -147,7 +147,7 @@ export default function SulcruOrganic() {
               <div className='max-w-2xl'>
                 <p className='text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-6 text-sm'>Pure By Nature. Powered By Science.</p>
 
-                <h1 className='text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] mb-6 md:mb-8 text-center lg:text-left'>
+                <h1 className='text-5xl sm:text-6xl md:text-7xl font-black leading-tight md:leading-[0.95] mb-8 md:mb-8 text-center lg:text-left'>
                   Premium Organic
                   <br />
                   Agricultural Solutions

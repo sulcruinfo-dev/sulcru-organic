@@ -220,8 +220,8 @@ export default function SulcruOrganic() {
               <h2 className='text-4xl lg:text-5xl font-black'>Results From Healthy Soil & Stronger Growth</h2>
             </div>
 
-            <div className='overflow-x-auto pb-4'>
-              <div className='flex gap-8 min-w-max'>
+            <div className='pb-4'>
+              <div className='grid md:grid-cols-2 gap-8'>
                 {[
                   {
                     title: 'Improved Vegetable Growth',
@@ -246,7 +246,7 @@ export default function SulcruOrganic() {
                 ].map((slide) => (
                   <div
                     key={slide.title}
-                    className='group relative w-[340px] overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-950 text-left hover:border-yellow-400/60 transition'
+                    className='group relative overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-950 text-left hover:border-yellow-400/60 transition'
                   >
                     <div
                       className='h-72 bg-cover bg-center transition duration-500 group-hover:scale-105'

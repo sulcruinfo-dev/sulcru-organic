@@ -160,7 +160,10 @@ export default function SulcruOrganic() {
                 </p>
 
                 <div className='flex flex-col sm:flex-row gap-4 sm:gap-5 items-center lg:items-start'>
-                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button></div>
+                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button>
+
+                  <button onClick={() => navigateTo('benefits')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
+                </div>
               </div>
 
               <div className='relative flex justify-center items-center'>
@@ -265,14 +268,7 @@ export default function SulcruOrganic() {
             </div>
           </section>
 
-        
-          <section className='px-6 lg:px-20 py-16 text-center'>
-            <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>
-              REQUEST A QUOTE
-            </button>
-          </section>
-
-</main>
+        </main>
       )}
 
       {page === 'products' && (

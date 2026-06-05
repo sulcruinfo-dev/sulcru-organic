@@ -160,9 +160,9 @@ export default function SulcruOrganic() {
                 </p>
 
                 <div className='flex flex-col sm:flex-row gap-4 sm:gap-5 items-center lg:items-start'>
-                  <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>REQUEST A QUOTE</button>
+                  
 
-                  <button onClick={() => navigateTo('benefits')} className='px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
+                  <button onClick={() => navigateTo('benefits')} className='hidden md:inline-block px-10 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition'>LEARN MORE</button>
                 </div>
               </div>
 
@@ -268,6 +268,16 @@ export default function SulcruOrganic() {
             </div>
           </section>
 
+
+          <section className='px-6 lg:px-20 py-16 text-center bg-black'>
+            <h2 className='text-3xl lg:text-4xl font-black mb-4'>Ready to Grow With Sulcru Organic?</h2>
+            <p className='text-zinc-400 max-w-2xl mx-auto mb-8'>
+              Contact us today for pricing, product recommendations and application guidance.
+            </p>
+            <button onClick={() => setShowQuote(true)} className='px-10 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition'>
+              REQUEST A QUOTE
+            </button>
+          </section>
         </main>
       )}
 

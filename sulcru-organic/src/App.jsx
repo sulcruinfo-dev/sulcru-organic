@@ -121,7 +121,7 @@ export default function SulcruOrganic() {
         <div className='hidden md:flex gap-10 text-sm font-semibold tracking-wide uppercase'>
           <button onClick={() => navigateTo('home')} className={`hover:text-yellow-400 transition pb-1 ${page === 'home' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Home</button>
           <button onClick={() => navigateTo('about')} className={`hover:text-yellow-400 transition pb-1 ${page === 'about' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>About Us</button>
-          <button onClick={() => navigateTo('benefits')} className={`hover:text-yellow-400 transition pb-1 ${page === 'products' || page === 'product' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Shop</button>
+          <button onClick={() => navigateTo('products')} className={`hover:text-yellow-400 transition pb-1 ${page === 'products' || page === 'product' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Shop</button>
           <button onClick={() => navigateTo('ingredients')} className={`hover:text-yellow-400 transition pb-1 ${page === 'ingredients' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Ingredients</button>
           <button onClick={() => navigateTo('benefits')} className={`hover:text-yellow-400 transition pb-1 ${page === 'benefits' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Benefits</button>
           <button onClick={() => navigateTo('contact')} className={`hover:text-yellow-400 transition pb-1 ${page === 'contact' ? 'border-b-2 border-yellow-400 text-yellow-400' : ''}`}>Contact</button>

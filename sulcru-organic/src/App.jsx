@@ -111,8 +111,7 @@ export default function SulcruOrganic() {
 
   return (
     <div className='min-h-screen font-sans bg-black text-white'>
-      <nav className='sticky top-0 z-20 bg-black/95 backdrop-blur border-b border-yellow-500/10 px-8 py-5 flex justify-between items-center'>
-        <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
+      <nav className='sticky top-0 z-20 bg-black/75 md:bg-black/95 backdrop-blur-md border-b border-yellow-500/10 px-8 py-5 flex justify-between items-center'>        <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
           <img
                     src='https://plain-eeur-prod-public.komododecks.com/202605/04/rOjpVcKC9rFmXFlCuWxE/image.png'
                     alt='Sulcru Organic Logo' className='w-20 h-20 object-contain drop-shadow-2xl' />

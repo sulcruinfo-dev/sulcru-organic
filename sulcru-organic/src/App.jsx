@@ -245,7 +245,7 @@ export default function SulcruOrganic() {
                 ].map((slide) => (
                   <div
                     key={slide.title}
-                    className='group relative w-[340px] overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-950 text-left hover:border-yellow-400/60 transition'
+                    className='group relative w-full overflow-hidden rounded-3xl border border-yellow-500/20 bg-zinc-950 text-left hover:border-yellow-400/60 transition'
                   >
                     <div
                       className='h-72 bg-cover bg-center transition duration-500 group-hover:scale-105'
@@ -264,7 +264,6 @@ export default function SulcruOrganic() {
                   </div>
                 ))}
               </div>
-            </div>
           </section>
 
 

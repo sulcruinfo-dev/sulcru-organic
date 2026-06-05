@@ -220,8 +220,7 @@ export default function SulcruOrganic() {
               <h2 className='text-4xl lg:text-5xl font-black'>Results From Healthy Soil & Stronger Growth</h2>
             </div>
 
-            <div className='overflow-x-auto pb-4'>
-              <div className='flex gap-8 min-w-max'>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {[
                   {
                     title: 'Improved Vegetable Growth',

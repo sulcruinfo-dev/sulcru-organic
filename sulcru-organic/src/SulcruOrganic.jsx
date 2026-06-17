@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function SulcruOrganic() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const page =
     location.pathname === '/'
@@ -84,15 +85,16 @@ export default function SulcruOrganic() {
   const soft = 'bg-zinc-900 rounded-2xl border border-yellow-500/20';
 
   function openProduct(product) {
-    setSelectedProduct(product);
-    setPage('product');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  setSelectedProduct(product);
+  navigate('/products');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
   function navigateTo(pageName) {
-    setPage(pageName);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  const route = pageName === 'home' ? '/' : `/${pageName}`;
+  navigate(route);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
   function submitQuote(e) {
     e.preventDefault();

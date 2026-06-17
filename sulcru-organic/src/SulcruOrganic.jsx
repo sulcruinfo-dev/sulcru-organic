@@ -534,5 +534,5 @@ export default function SulcruOrganic() {
         Sulcru Organic © 2026 • Belfast, South Africa
       </footer>
     </div>
-  );
+  ); 
 }

@@ -3,7 +3,14 @@
 import { useState } from 'react';
 
 export default function SulcruOrganic() {
-  const [page, setPage] = useState('home');
+  import { useLocation } from 'react-router-dom';
+
+const location = useLocation();
+
+const page =
+  location.pathname === '/'
+    ? 'home'
+    : location.pathname.substring(1);
   const [showQuote, setShowQuote] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);

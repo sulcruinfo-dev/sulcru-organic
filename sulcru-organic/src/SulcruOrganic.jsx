@@ -1,16 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function SulcruOrganic() {
-  import { useLocation } from 'react-router-dom';
+  const location = useLocation();
 
-const location = useLocation();
+  const page =
+    location.pathname === '/'
+      ? 'home'
+      : location.pathname.substring(1);
 
-const page =
-  location.pathname === '/'
-    ? 'home'
-    : location.pathname.substring(1);
   const [showQuote, setShowQuote] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);

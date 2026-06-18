@@ -1,6 +1,7 @@
 'use client';
  
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function SulcruOrganic() {

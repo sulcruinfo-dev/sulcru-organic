@@ -86,7 +86,7 @@ export default function SulcruOrganic() {
 
   function openProduct(product) {
   setSelectedProduct(product);
-  navigate('/products');
+  navigate('/product');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -424,7 +424,7 @@ export default function SulcruOrganic() {
         </main>
       )}
 
-      {page === 'products' && selectedProduct && (
+      {page === 'product' && selectedProduct && (
         <main className='p-10'>
           <div className='flex gap-3 mb-6'>
             <button onClick={() => navigateTo('products')} className='px-4 py-2 border rounded-xl'>← Back to Products</button>

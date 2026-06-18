@@ -98,15 +98,33 @@ export default function SulcruOrganic() {
 }
 
   function submitQuote(e) {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const name = form.get('name');
-    const userEmail = form.get('email');
-    const message = form.get('message');
-    window.location.href = `mailto:${email}?subject=Quote Request from ${name}&body=Name: ${name}%0AEmail: ${userEmail}%0AMessage: ${message}`;
-    window.open(`https://wa.me/${phone}?text=${encodeURIComponent('Quote Request - ' + name)}`, '_blank');
+  e.preventDefault();
+
+  const form = new FormData(e.currentTarget);
+
+  const name = form.get('name');
+  const userEmail = form.get('email');
+  const message = form.get('message');
+
+  emailjs.send(
+    'service_lznck7j',
+    'template_5yedwhb',
+    {
+      name: name,
+      email: userEmail,
+      message: message,
+    },
+    'uiD8dtDSIdfEYu9Ik'
+  )
+  .then(() => {
+    alert('Quote request sent successfully.');
     setShowQuote(false);
-  }
+  })
+  .catch((error) => {
+    console.error(error);
+    alert('Failed to send quote request.');
+  });
+}
 
   function QuoteForm() {
     return (

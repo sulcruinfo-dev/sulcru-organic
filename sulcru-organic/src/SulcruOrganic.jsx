@@ -424,7 +424,7 @@ export default function SulcruOrganic() {
         </main>
       )}
 
-      {page === 'product' && selectedProduct && (
+      {page === 'products' && selectedProduct && (
         <main className='p-10'>
           <div className='flex gap-3 mb-6'>
             <button onClick={() => navigateTo('products')} className='px-4 py-2 border rounded-xl'>← Back to Products</button>

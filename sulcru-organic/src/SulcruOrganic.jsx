@@ -167,6 +167,7 @@ const message = form.get('message');
     <option>Plant Gro+</option>
     <option>Sulcru Insect Repel</option>
     <option>Compost Boost</option>
+    <option>Other</option>
   </select>
 
   <input

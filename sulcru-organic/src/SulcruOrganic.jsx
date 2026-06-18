@@ -110,15 +110,18 @@ const hectares = form.get('hectares');
 const message = form.get('message');
 
   emailjs.send(
-    'service_lznck7j',
-    'template_5yedwhb',
-    {
-      name: name,
-      email: userEmail,
-      message: message,
-    },
-    'uiD8dtDSIdfEYu9Ik'
-  )
+  'service_lznck7j',
+  'template_5yedwhb',
+  {
+    name: name,
+    phone: phone,
+    email: userEmail,
+    product: product,
+    hectares: hectares,
+    message: message,
+  },
+  'uiD8dtDSIdfEYu9Ik'
+)
   .then(() => {
     alert('Quote request sent successfully.');
     setShowQuote(false);

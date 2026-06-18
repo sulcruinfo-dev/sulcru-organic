@@ -103,8 +103,11 @@ export default function SulcruOrganic() {
   const form = new FormData(e.currentTarget);
 
   const name = form.get('name');
-  const userEmail = form.get('email');
-  const message = form.get('message');
+const phone = form.get('phone');
+const userEmail = form.get('email');
+const product = form.get('product');
+const hectares = form.get('hectares');
+const message = form.get('message');
 
   emailjs.send(
     'service_lznck7j',
@@ -128,12 +131,67 @@ export default function SulcruOrganic() {
 
   function QuoteForm() {
     return (
-      <form onSubmit={submitQuote} className='grid gap-4 mt-4'>
-        <input name='name' placeholder='Your Name' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400' />
-        <input name='email' type='email' placeholder='Your Email' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400' />
-        <textarea name='message' rows={6} placeholder='What do you need?' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400 resize-none' />
-        <button type='submit' className='px-5 py-3 rounded-2xl bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition'>Request Quote</button>
-      </form>
+      <form onSubmit={submitQuote} className="space-y-4">
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    required
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  />
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    required
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  />
+
+  <select
+    name="product"
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  >
+    <option value="">Select Product</option>
+    <option>Crop Boost</option>
+    <option>Soil Improver</option>
+    <option>Plant Gro+</option>
+    <option>Sulcru Insect Repel</option>
+    <option>Compost Boost</option>
+  </select>
+
+  <input
+    type="text"
+    name="hectares"
+    placeholder="Farm Size / Hectares"
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  />
+
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="Tell us about your crop, farm, or requirements..."
+    required
+    className="w-full p-4 rounded-xl bg-zinc-900 border border-yellow-500/20"
+  />
+
+  <button
+    type="submit"
+    className="w-full py-4 bg-yellow-400 text-black font-bold rounded-xl"
+  >
+    Request Quote
+  </button>
+
+</form>
     );
   }
 

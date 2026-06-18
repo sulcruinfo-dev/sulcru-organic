@@ -131,7 +131,7 @@ export default function SulcruOrganic() {
       <form onSubmit={submitQuote} className='grid gap-4 mt-4'>
         <input name='name' placeholder='Your Name' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400' />
         <input name='email' type='email' placeholder='Your Email' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400' />
-        <textarea name='message' rows={4} placeholder='What do you need?' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400 resize-none' />
+        <textarea name='message' rows={6} placeholder='What do you need?' required className='p-3 rounded-xl bg-zinc-900 text-white border border-yellow-500/20 focus:outline-none focus:border-yellow-400 resize-none' />
         <button type='submit' className='px-5 py-3 rounded-2xl bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition'>Request Quote</button>
       </form>
     );

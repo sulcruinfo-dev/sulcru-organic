@@ -123,6 +123,19 @@ const message = form.get('message');
   'uiD8dtDSIdfEYu9Ik'
 )
   .then(() => {
+   emailjs.send(
+  'service_lznck7j',
+  'template_uvmqgih',
+  {
+    name: name,
+    email: userEmail,
+    phone: phone,
+    product: product,
+    hectares: hectares,
+    message: message,
+  },
+  'uiD8dtDSIdfEYu9Ik'
+);
     alert('Quote request sent successfully.');
     setShowQuote(false);
   })

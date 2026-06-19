@@ -14,8 +14,10 @@ export default function SulcruOrganic() {
       : location.pathname.substring(1);
 
   const [showQuote, setShowQuote] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+const [quoteSuccess, setQuoteSuccess] = useState(false);
+
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [selectedProduct, setSelectedProduct] = useState(null);
   
   const email = 'sulcru.info@gmail.com';
   const phone = '27615141042';

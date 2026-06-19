@@ -138,8 +138,8 @@ const message = form.get('message');
   },
   'uiD8dtDSIdfEYu9Ik'
 );
-    alert('Quote request sent successfully.');
     setShowQuote(false);
+    setQuoteSuccess(true);
   })
   .catch((error) => {
     console.error(error);
@@ -215,6 +215,7 @@ const message = form.get('message');
   }
 
   return (
+   <>
     <div className='min-h-screen font-sans bg-black text-white'>
       <nav className='sticky top-0 z-20 bg-black/75 md:bg-black/95 backdrop-blur-md border-b border-yellow-500/10 px-8 py-5 flex justify-between items-center'>        <button onClick={() => navigateTo('home')} className='flex items-center gap-4'>
           <img
@@ -632,5 +633,29 @@ const message = form.get('message');
         Sulcru Organic © 2026 • Belfast, South Africa
       </footer>
     </div>
-  ); 
+
+{quoteSuccess && (
+  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+    <div className="bg-zinc-900 border border-yellow-400 rounded-2xl p-8 max-w-md text-center">
+      <h2 className="text-2xl font-bold text-yellow-400 mb-4">
+        Thank You!
+      </h2>
+
+      <p className="text-zinc-300 mb-6">
+        Your quote request has been received successfully.
+        A member of the Sulcru Organic team will contact you shortly.
+      </p>
+
+      <button
+        onClick={() => setQuoteSuccess(false)}
+        className="bg-yellow-400 text-black px-6 py-3 rounded-xl font-bold hover:bg-yellow-300"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
+</>
+); 
 }

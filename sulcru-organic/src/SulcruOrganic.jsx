@@ -15,7 +15,7 @@ export default function SulcruOrganic() {
 
   const [showQuote, setShowQuote] = useState(false);
 const [quoteSuccess, setQuoteSuccess] = useState(false);
-
+const [loading, setLoading] = useState(false);
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 const [selectedProduct, setSelectedProduct] = useState(null);
   
@@ -111,7 +111,8 @@ const product = form.get('product');
 const hectares = form.get('hectares');
 const message = form.get('message');
 
-  emailjs.send(
+  setLoading(true);
+   emailjs.send(
   'service_lznck7j',
   'template_5yedwhb',
   {
@@ -138,10 +139,12 @@ const message = form.get('message');
   },
   'uiD8dtDSIdfEYu9Ik'
 );
+    setLoading(false); 
     setShowQuote(false);
     setQuoteSuccess(true);
   })
   .catch((error) => {
+   setLoading(false);
     console.error(error);
     alert('Failed to send quote request.');
   });
@@ -205,9 +208,10 @@ const message = form.get('message');
 
   <button
     type="submit"
+   disabled={loading}
     className="w-full py-4 bg-yellow-400 text-black font-bold rounded-xl"
   >
-    Request Quote
+    {loading ? "Sending..." : "Request Quote"}
   </button>
 
 </form>

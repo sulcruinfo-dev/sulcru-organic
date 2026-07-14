@@ -56,33 +56,7 @@ const [selectedProduct, setSelectedProduct] = useState(null);
       performance: ['Shortens compost cycles', 'Improves consistency', 'Boosts waste management efficiency'],
       use: 'Best for compost yards and organic waste recycling.'
     },
-    {
-      name: 'Sulcru Insect Repel',
-      image: 'https://images.openai.com/static-rsc-4/hu3F6cP_bHCqi2xAxQ76WmtXL2cSPz5rp1gK5SedCvcHVP_DBI53zm62RdpCXx4Lq_OxNP8Jt40pTTniCbbdhGaGvnXJzK_Uq3Jvq9VQfq_qtqOG_dklcrL0BEjTZyAt0hHBhQRgCGr5aPeabBIJQXxDAQyYJZ3Zr-UGwtfg1EgPCNRNwuFbVV5Sye6wTf_Z?purpose=fullsize',
-      desc: 'Natural insect repellent designed to protect crops without harming plants or beneficial biology.',
-      benefits: [
-        'Repels a wide range of common crop pests',
-        'Safe for plants, pollinators (when used correctly), and soil biology',
-        'Supports organic and regenerative farming programs'
-      ],
-      performance: [
-        'Rapid reduction in visible pest pressure',
-        'Maintains plant vigor during infestations',
-        'Supports consistent crop quality and marketability'
-      ],
-      use: 'Apply as a foliar spray across vegetables, orchards, and general agricultural crops. Repeat at intervals based on pest pressure.',
-      pests: ['Aphids','Whiteflies','Thrips','Spider mites','Leafhoppers','And many other common agricultural pests (not limited to this list)'],
-      application: [
-        'Preventative: Apply every 7–10 days',
-        'Active infestation: Apply every 3–5 days until controlled',
-        'Best applied early morning or late afternoon'
-      ],
-      safety: [
-        'Shake well before use',
-        'Do not spray during peak sunlight to avoid leaf stress',
-        'Test on a small area before full application'
-      ]
-    }
+    
   ];
 
   const card = 'bg-zinc-950 rounded-3xl shadow-2xl border border-yellow-500/20';
@@ -187,7 +161,6 @@ const message = form.get('message');
     <option>Crop Boost</option>
     <option>Soil Improver</option>
     <option>Plant Gro+</option>
-    <option>Sulcru Insect Repel</option>
     <option>Compost Boost</option>
     <option>Other</option>
   </select>
@@ -568,31 +541,7 @@ const message = form.get('message');
                 </div>
               )}
 
-              {selectedProduct.name === 'Sulcru Insect Repel' && (
-                <>
-                  <div className={`${soft} p-5 mb-8`}>
-                    <h3 className='text-xl font-semibold mb-3'>Target Pests</h3>
-                    <ul className='list-disc pl-5 space-y-2'>
-                      {selectedProduct.pests.map((p) => <li key={p}>{p}</li>)}
-                    </ul>
-                  </div>
-
-                  <div className={`${soft} p-5 mb-8`}>
-                    <h3 className='text-xl font-semibold mb-3'>Application Guide</h3>
-                    <ul className='list-disc pl-5 space-y-2'>
-                      {selectedProduct.application.map((a) => <li key={a}>{a}</li>)}
-                    </ul>
-                  </div>
-
-                  <div className={`${soft} p-5 mb-8`}>
-                    <h3 className='text-xl font-semibold mb-3'>Safety & Best Practice</h3>
-                    <ul className='list-disc pl-5 space-y-2'>
-                      {selectedProduct.safety.map((s) => <li key={s}>{s}</li>)}
-                    </ul>
-                  </div>
-                </>
-              )}
-
+              
               <button onClick={() => setShowQuote(true)} className='px-6 py-3 rounded-2xl bg-yellow-400 text-black hover:bg-yellow-300'>Request Quote</button>
             </div>
           </div>

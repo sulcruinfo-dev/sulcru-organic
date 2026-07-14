@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaWhatsapp } from "react-icons/fa";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
+import Navbar from "./components/Navbar";
 
 export default function SulcruOrganic() {
   const location = useLocation();

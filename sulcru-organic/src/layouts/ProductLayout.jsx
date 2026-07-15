@@ -7,9 +7,9 @@ export default function ProductLayout({ children }) {
     <div className="min-h-screen bg-black text-white">
       <Navbar />
       
-       <main className="min-h-screen">
-          {children}
-     </main>
+      <main className="min-h-screen pt-8 pb-16">
+         {children}
+       </main>
 
       <Footer />
 

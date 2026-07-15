@@ -1,12 +1,17 @@
 import ProductLayout from "../layouts/ProductLayout";
 import ProductPage from "../components/ProductPage";
 
+const soilImprover = {
+  title: "Soil Improver",
+  description:
+    "Soil Improver is a premium organic soil conditioner developed to improve soil biology, increase microbial activity, enhance soil structure, and support healthier root development across all soil types.",
+};
+
 export default function SoilImproverPage() {
   return (
     <ProductLayout>
        <ProductPage
-  title="Soil Improver"
-  description="Soil Improver is a premium organic soil conditioner developed to improve soil biology, increase microbial activity, enhance soil structure, and support healthier root development across all soil types."
+  product={soilImprover}
 >
   <section className="mt-16">
     <h2 className="text-3xl font-bold mb-6">

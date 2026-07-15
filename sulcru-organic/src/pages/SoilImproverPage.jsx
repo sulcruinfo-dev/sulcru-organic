@@ -18,6 +18,11 @@ export default function SoilImproverPage() {
     structure, and support healthier root development across all soil
     types.
   </p>
+        <div className="mt-10">
+  <button className="px-8 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition">
+    Request a Quote
+  </button>
+</div>
 </section>
       <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-16">
   <h2 className="text-3xl font-bold mb-6">

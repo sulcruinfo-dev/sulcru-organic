@@ -15,6 +15,11 @@ export default function ProductPage({
       <p className="text-xl text-zinc-300 max-w-3xl leading-relaxed">
         {description}
       </p>
+      <div className="mt-10">
+  <button className="px-8 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition">
+    Request a Quote
+  </button>
+</div>
     </section>
   );
 }

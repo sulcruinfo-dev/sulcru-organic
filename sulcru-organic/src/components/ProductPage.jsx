@@ -1,6 +1,7 @@
 export default function ProductPage({
   title,
   description,
+  children,
 }) {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
@@ -20,6 +21,8 @@ export default function ProductPage({
     Request a Quote
   </button>
 </div>
+
+{children}
     </section>
   );
 }

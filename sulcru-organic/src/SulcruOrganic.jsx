@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 export default function SulcruOrganic() {
   const location = useLocation();

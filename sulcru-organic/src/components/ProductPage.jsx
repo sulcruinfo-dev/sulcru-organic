@@ -1,6 +1,5 @@
 export default function ProductPage({
-  title,
-  description,
+  product,
   children,
 }) {
   return (
@@ -11,11 +10,11 @@ export default function ProductPage({
       </p>
 
       <h1 className="text-5xl lg:text-6xl font-black mb-6">
-        {title}
+        {product.title}
       </h1>
 
       <p className="text-xl text-zinc-300 max-w-3xl leading-relaxed">
-        {description}
+        {product.description}
       </p>
       <div className="mt-10">
   <button

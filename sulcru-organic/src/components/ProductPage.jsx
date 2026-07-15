@@ -4,8 +4,9 @@ export default function ProductPage({
   children,
 }) {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-      <p className="text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-4">
+          <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <p className="text-yellow-400 uppercase tracking-[0.25em] font-semibold mb-4">
         Sulcru Organic
       </p>
 
@@ -25,7 +26,9 @@ export default function ProductPage({
 </button>
 </div>
 
-{children}
-    </section>
+    </div>
+
+    {children}
+          </section>
   );
 }

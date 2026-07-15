@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FaWhatsapp } from "react-icons/fa";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function SulcruOrganic() {
   const location = useLocation();

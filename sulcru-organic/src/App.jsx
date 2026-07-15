@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import SulcruOrganic from './SulcruOrganic';
+import SoilImproverPage from './pages/SoilImproverPage';
 
 export default function App() {
   return (

@@ -46,6 +46,29 @@ export default function SoilImproverPage() {
     </div>
   </div>
 </section>
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-16">
+  <h2 className="text-3xl font-bold mb-6">
+    Key Benefits
+  </h2>
+
+  <ul className="grid md:grid-cols-2 gap-4 text-zinc-300">
+    <li className="rounded-xl border border-yellow-500/20 bg-zinc-900 p-5">
+      ✓ Supports beneficial soil microorganisms
+    </li>
+
+    <li className="rounded-xl border border-yellow-500/20 bg-zinc-900 p-5">
+      ✓ Improves soil structure across a wide range of soil types
+    </li>
+
+    <li className="rounded-xl border border-yellow-500/20 bg-zinc-900 p-5">
+      ✓ Encourages stronger root development
+    </li>
+
+    <li className="rounded-xl border border-yellow-500/20 bg-zinc-900 p-5">
+      ✓ Supports improved water retention and nutrient availability
+    </li>
+  </ul>
+</section>
     </ProductLayout>
   );
 }

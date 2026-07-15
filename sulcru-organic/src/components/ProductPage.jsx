@@ -28,7 +28,15 @@ export default function ProductPage({
 
           <div className="flex justify-center items-center">
   <div className="w-full max-w-md h-96 rounded-3xl border border-yellow-500/20 bg-zinc-900 flex items-center justify-center text-zinc-500">
-     Coming Soon
+     <div className="text-center">
+  <p className="text-lg font-semibold text-white">
+    Official Product Image
+  </p>
+
+  <p className="text-sm text-zinc-500 mt-2">
+    Available Soon
+  </p>
+</div>
   </div>
 </div>
 

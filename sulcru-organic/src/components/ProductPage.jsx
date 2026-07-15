@@ -17,9 +17,12 @@ export default function ProductPage({
         {description}
       </p>
       <div className="mt-10">
-  <button className="px-8 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition">
+  <button
+       type="button"
+       className="px-8 py-4 rounded-2xl border border-yellow-500 text-yellow-400 font-bold hover:bg-yellow-400 hover:text-black transition"
+>
     Request a Quote
-  </button>
+</button>
 </div>
 
 {children}

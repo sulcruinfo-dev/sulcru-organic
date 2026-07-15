@@ -28,7 +28,7 @@ export default function ProductPage({
 
           <div className="flex justify-center items-center">
   <div className="w-full max-w-md h-96 rounded-3xl border border-yellow-500/20 bg-zinc-900 flex items-center justify-center text-zinc-500">
-    Product Image
+     Coming Soon
   </div>
 </div>
 

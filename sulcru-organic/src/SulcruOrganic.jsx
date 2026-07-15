@@ -8,6 +8,7 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import ProductList from "./components/ProductList";
 
 export default function SulcruOrganic() {
   const location = useLocation();

@@ -5,6 +5,17 @@ const soilImprover = {
   title: "Soil Improver",
   description:
     "Soil Improver is a premium organic soil conditioner developed to improve soil biology, increase microbial activity, enhance soil structure, and support healthier root development across all soil types.",
+
+  whatItDoes: [
+    {
+      title: "Improves Soil Health",
+      text: "Encourages healthier soil biology, improves microbial activity, and supports stronger root development across a wide range of soil conditions."
+    },
+    {
+      title: "Supports Long-Term Productivity",
+      text: "Helps create better growing conditions for healthier crops, improved nutrient efficiency, and more resilient agricultural systems."
+    }
+  ],
 };
 
 export default function SoilImproverPage() {

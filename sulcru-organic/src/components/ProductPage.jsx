@@ -72,9 +72,6 @@ export default function ProductPage({
   </div>
 
   {children}
-
-</section>
-{children}
           </section>
   );
 }

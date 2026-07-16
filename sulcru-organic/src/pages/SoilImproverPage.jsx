@@ -1,5 +1,5 @@
 import ProductLayout from "../layouts/ProductLayout";
-import ProductPage from "../components/ProductPage";
+import ProductPage, { Section } from "../components/ProductPage";
 
 const soilImprover = {
   title: "Soil Improver",

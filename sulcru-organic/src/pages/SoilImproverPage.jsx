@@ -1,5 +1,5 @@
 import ProductLayout from "../layouts/ProductLayout";
-import ProductPage, { Section } from "../components/ProductPage";
+import ProductPage from "../components/ProductPage";
 
 const soilImprover = {
   title: "Soil Improver",
@@ -12,7 +12,7 @@ export default function SoilImproverPage() {
     <ProductLayout>
        <ProductPage product={soilImprover}>
         
-         <Section title="What It Does">
+         <section className="mt-20">
               <h2 className="text-3xl lg:text-4xl font-bold mb-8">
         What It Does </h2>
   <div className="grid md:grid-cols-2 gap-8">
@@ -39,7 +39,7 @@ export default function SoilImproverPage() {
     </div>
 
   </div>
-</Section>
+</section>
 
          <section className="mt-20">
   <h2 className="text-3xl lg:text-4xl font-bold mb-8">

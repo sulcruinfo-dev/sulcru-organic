@@ -1,3 +1,28 @@
+function Section({ title, children }) {
+  return (
+    <section className="mt-20">
+      <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+        {title}
+      </h2>
+
+      {children}
+    </section>
+  );
+}
+
+function InfoCard({ title, children }) {
+  return (
+    <div className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8">
+      <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+        {title}
+      </h3>
+
+      <div className="text-zinc-300 leading-relaxed">
+        {children}
+      </div>
+    </div>
+  );
+}
 export default function ProductPage({
   product,
   children,

@@ -44,6 +44,47 @@ export default function SoilImproverPage() {
 
   </div>
 </section>
+         <section className="mt-20">
+  <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+    Key Benefits
+  </h2>
+
+  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+    {[
+      {
+        title: "Healthier Soil Biology",
+        text: "Supports beneficial microbial activity for improved soil function."
+      },
+      {
+        title: "Better Root Development",
+        text: "Encourages stronger root systems for improved nutrient and water uptake."
+      },
+      {
+        title: "Improved Moisture Retention",
+        text: "Helps soils retain moisture more effectively under varying conditions."
+      },
+      {
+        title: "Suitable for All Soil Types",
+        text: "Designed for healthy, depleted, sandy, clay and regenerative soils."
+      }
+    ].map((benefit) => (
+      <div
+        key={benefit.title}
+        className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8 hover:border-yellow-400 transition"
+      >
+        <h3 className="text-xl font-bold mb-4 text-yellow-400">
+          {benefit.title}
+        </h3>
+
+        <p className="text-zinc-300 leading-relaxed">
+          {benefit.text}
+        </p>
+      </div>
+    ))}
+
+  </div>
+</section>
   <section className="mt-16">
     <h2 className="text-3xl font-bold mb-6">
       Key Benefits

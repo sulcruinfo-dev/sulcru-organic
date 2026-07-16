@@ -85,15 +85,6 @@ export default function SoilImproverPage() {
 
   </div>
 </section>
-  <section className="mt-16">
-    <h2 className="text-3xl font-bold mb-6">
-      Key Benefits
-    </h2>
-
-    <p className="text-zinc-300">
-      This is a temporary test section to verify that ProductPage correctly renders child content.
-    </p>
-  </section>
 </ProductPage>
     </ProductLayout>
   );

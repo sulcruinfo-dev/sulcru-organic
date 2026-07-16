@@ -10,9 +10,40 @@ const soilImprover = {
 export default function SoilImproverPage() {
   return (
     <ProductLayout>
-       <ProductPage
-  product={soilImprover}
->
+       <ProductPage product={soilImprover}>
+         <section className="mt-20">
+  <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+    What It Does
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-8">
+
+    <div className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8">
+      <h3 className="text-2xl font-bold mb-4">
+        Improves Soil Health
+      </h3>
+
+      <p className="text-zinc-300 leading-relaxed">
+        Encourages healthier soil biology, improves microbial activity,
+        and supports stronger root development across a wide range of soil
+        conditions.
+      </p>
+    </div>
+
+    <div className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8">
+      <h3 className="text-2xl font-bold mb-4">
+        Supports Long-Term Productivity
+      </h3>
+
+      <p className="text-zinc-300 leading-relaxed">
+        Helps create better growing conditions for healthier crops,
+        improved nutrient efficiency, and more resilient agricultural
+        systems.
+      </p>
+    </div>
+
+  </div>
+</section>
   <section className="mt-16">
     <h2 className="text-3xl font-bold mb-6">
       Key Benefits

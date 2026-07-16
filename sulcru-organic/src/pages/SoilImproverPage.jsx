@@ -3,124 +3,54 @@ import ProductPage from "../components/ProductPage";
 
 const soilImprover = {
   title: "Soil Improver",
+
   description:
     "Soil Improver is a premium organic soil conditioner developed to improve soil biology, increase microbial activity, enhance soil structure, and support healthier root development across all soil types.",
+
+  image: null,
 
   whatItDoes: [
     {
       title: "Improves Soil Health",
-      text: "Encourages healthier soil biology, improves microbial activity, and supports stronger root development across a wide range of soil conditions."
+      text: "Encourages healthier soil biology, improves microbial activity, and supports stronger root development across a wide range of soil conditions.",
     },
     {
       title: "Supports Long-Term Productivity",
-      text: "Helps create better growing conditions for healthier crops, improved nutrient efficiency, and more resilient agricultural systems."
-    }
+      text: "Helps create better growing conditions for healthier crops, improved nutrient efficiency, and more resilient agricultural systems.",
+    },
+  ],
+
+  benefits: [
+    {
+      title: "Healthier Soil Biology",
+      text: "Supports beneficial microbial activity for improved soil function.",
+    },
+    {
+      title: "Better Root Development",
+      text: "Encourages stronger root systems for improved nutrient and water uptake.",
+    },
+    {
+      title: "Improved Moisture Retention",
+      text: "Helps soils retain moisture more effectively under varying conditions.",
+    },
+    {
+      title: "Suitable for All Soil Types",
+      text: "Designed for healthy, depleted, sandy, clay and regenerative soils.",
+    },
+  ],
+
+  applications: [
+    "Open Field Crops",
+    "Vegetable Production",
+    "Fruit Orchards",
+    "Regenerative Farming",
   ],
 };
 
 export default function SoilImproverPage() {
   return (
     <ProductLayout>
-       <ProductPage product={soilImprover}>
-        
-         <section className="mt-20">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-        What It Does </h2>
-  <div className="grid md:grid-cols-2 gap-8">
-    <div className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8">
-      <h3 className="text-2xl font-bold mb-4">
-
-        Improves Soil Health </h3>
-      <p className="text-zinc-300 leading-relaxed">
-        Encourages healthier soil biology, improves microbial activity,
-        and supports stronger root development across a wide range of soil
-        conditions.
-      </p>
-    </div>
-
-    <div className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8">
-      <h3 className="text-2xl font-bold mb-4">
-
-        Supports Long-Term Productivity </h3>
-      <p className="text-zinc-300 leading-relaxed">
-        Helps create better growing conditions for healthier crops,
-        improved nutrient efficiency, and more resilient agricultural
-        systems.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-         <section className="mt-20">
-  <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-    Key Benefits
-  </h2>
-
-  <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-
-    {[
-      {
-        title: "Healthier Soil Biology",
-        text: "Supports beneficial microbial activity for improved soil function."
-      },
-      {
-        title: "Better Root Development",
-        text: "Encourages stronger root systems for improved nutrient and water uptake."
-      },
-      {
-        title: "Improved Moisture Retention",
-        text: "Helps soils retain moisture more effectively under varying conditions."
-      },
-      {
-        title: "Suitable for All Soil Types",
-        text: "Designed for healthy, depleted, sandy, clay and regenerative soils."
-      }
-    ].map((benefit) => (
-      <div
-        key={benefit.title}
-        className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8 hover:border-yellow-400 transition"
-      >
-        <h3 className="text-xl font-bold mb-4 text-yellow-400">
-          {benefit.title}
-        </h3>
-
-        <p className="text-zinc-300 leading-relaxed">
-          {benefit.text}
-        </p>
-      </div>
-    ))}
-
-  </div>
-</section>
-         <section className="mt-20">
-  <h2 className="text-3xl lg:text-4xl font-bold mb-8">
-    Recommended Applications
-  </h2>
-
-  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-    {[
-      "Open Field Crops",
-      "Vegetable Production",
-      "Fruit Orchards",
-      "Regenerative Farming"
-    ].map((item) => (
-      <div
-        key={item}
-        className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8 text-center hover:border-yellow-400 transition"
-      >
-        <div className="text-5xl mb-4">🌱</div>
-
-        <h3 className="text-xl font-bold text-yellow-400">
-          {item}
-        </h3>
-      </div>
-    ))}
-
-  </div>
-</section>
-</ProductPage>
+      <ProductPage product={soilImprover} />
     </ProductLayout>
   );
 }

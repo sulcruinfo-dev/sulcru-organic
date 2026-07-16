@@ -82,6 +82,33 @@ export default function SoilImproverPage() {
 
   </div>
 </section>
+         <section className="mt-20">
+  <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+    Recommended Applications
+  </h2>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    {[
+      "Open Field Crops",
+      "Vegetable Production",
+      "Fruit Orchards",
+      "Regenerative Farming"
+    ].map((item) => (
+      <div
+        key={item}
+        className="rounded-3xl border border-yellow-500/20 bg-zinc-900 p-8 text-center hover:border-yellow-400 transition"
+      >
+        <div className="text-5xl mb-4">🌱</div>
+
+        <h3 className="text-xl font-bold text-yellow-400">
+          {item}
+        </h3>
+      </div>
+    ))}
+
+  </div>
+</section>
 </ProductPage>
     </ProductLayout>
   );

@@ -394,11 +394,58 @@ const message = form.get('message');
           <button onClick={() => navigateTo('home')} className='mb-6 px-4 py-2 border rounded-xl'>← Back Home</button>
           <div className={`${card} max-w-4xl mx-auto p-8`}>
             <h1 className='text-5xl font-bold mb-6'>Contact Us</h1>
-            <p>Phone / WhatsApp: 061 514 1042</p>
-            <p>Email: {email}</p>
-            <p className='mt-4'>Monday - Friday: 09:00 - 17:00</p>
-            <p>Saturday: By Appointment</p>
-            <p>Sunday / Holiday: Closed</p>
+            <div className="space-y-6 mb-6">
+
+  <div>
+    <h3 className="text-lg font-semibold text-white">
+      Phone / WhatsApp
+    </h3>
+
+    <a
+      href={`tel:${phone}`}
+      className="text-zinc-300 hover:text-yellow-400 transition"
+    >
+      {phone}
+    </a>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-8">
+
+    <div>
+      <h3 className="text-lg font-semibold text-white">
+        General Enquiries
+      </h3>
+
+      <a
+        href={`mailto:${email}`}
+        className="text-zinc-300 hover:text-yellow-400 transition"
+      >
+        {email}
+      </a>
+    </div>
+
+    <div>
+      <h3 className="text-lg font-semibold text-white">
+        Technical & Biotechnology
+      </h3>
+
+      <a
+        href="mailto:biotech@sulcruorganic.co.za"
+        className="text-zinc-300 hover:text-yellow-400 transition"
+      >
+        biotech@sulcruorganic.co.za
+      </a>
+    </div>
+
+  </div>
+
+  <div>
+    <p>Monday - Friday: 09:00 - 17:00</p>
+    <p>Saturday: By Appointment</p>
+    <p>Sunday / Holiday: Closed</p>
+  </div>
+
+</div>
             <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='inline-block mt-6 px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>Chat on WhatsApp</a>
             <QuoteForm />
           </div>

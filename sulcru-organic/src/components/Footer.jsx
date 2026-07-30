@@ -7,29 +7,33 @@ export default function Footer() {
         <a href='https://www.youtube.com/@SulcruOrganic' target='_blank' rel='noreferrer' className='hover:text-yellow-400'>YouTube</a>
         <a href='https://www.tiktok.com/@sulcruorganic' target='_blank' rel='noreferrer' className='hover:text-yellow-400'>TikTok</a>
       </div>
-      <div className="mt-6 text-zinc-400 space-y-1">
+      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
 
-  <p>
-    General Enquiries:
-    <br />
+  <div>
+    <h4 className="text-white font-semibold mb-2">
+      General Enquiries
+    </h4>
+
     <a
       href="mailto:info@sulcruorganic.co.za"
-      className="hover:text-yellow-400"
+      className="text-zinc-400 hover:text-yellow-400 transition"
     >
       info@sulcruorganic.co.za
     </a>
-  </p>
+  </div>
 
-  <p>
-    Biotechnology & Research:
-    <br />
+  <div>
+    <h4 className="text-white font-semibold mb-2">
+      Technical & Biotechnology
+    </h4>
+
     <a
       href="mailto:biotech@sulcruorganic.co.za"
-      className="hover:text-yellow-400"
+      className="text-zinc-400 hover:text-yellow-400 transition"
     >
       biotech@sulcruorganic.co.za
     </a>
-  </p>
+  </div>
 
 </div>
       Sulcru Organic © 2026 • Belfast, South Africa

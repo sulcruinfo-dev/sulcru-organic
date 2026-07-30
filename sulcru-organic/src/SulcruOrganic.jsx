@@ -26,7 +26,7 @@ const [loading, setLoading] = useState(false);
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 const [selectedProduct, setSelectedProduct] = useState(null);
   
-  const email = 'sulcru.info@gmail.com';
+  const email = 'info@sulcruorganic.co.za';
   const phone = '27615141042';
 
   const products = [

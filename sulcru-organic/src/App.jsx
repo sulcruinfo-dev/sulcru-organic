@@ -1,12 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import SulcruOrganic from './SulcruOrganic';
 import SoilImproverPage from './pages/SoilImproverPage';
+import SolutionsPage from './pages/SolutionsPage';
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<SulcruOrganic />} />
       <Route path="/about" element={<SulcruOrganic />} />
+      <Route path="/solutions" element={<SolutionsPage />} />
       <Route path="/products" element={<SulcruOrganic />} />
       <Route path="/products/soil-improver" element={<SoilImproverPage />} />
       <Route path="/product" element={<SulcruOrganic />} />

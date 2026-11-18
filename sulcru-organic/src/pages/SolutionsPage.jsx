@@ -45,7 +45,17 @@ export default function SolutionsPage() {
               sustainable crop development.
             </p>
           </div>
-            </div>
+            
+<div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+
+  <img
+    src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=85"
+    alt="Professionally maintained golf course and green turf"
+    className="w-full h-56 object-cover"
+  />
+
+  <div className="p-8">
+
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
             <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
               DIVISION 02
@@ -59,6 +69,7 @@ export default function SolutionsPage() {
               fields and residential estates.
             </p>
           </div>
+    </div>
 
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
             <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">

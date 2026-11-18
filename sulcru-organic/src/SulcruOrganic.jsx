@@ -446,7 +446,7 @@ const message = form.get('message');
   </div>
 
 </div>
-            <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='inline-block mt-6 px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>Chat on WhatsApp</a>
+            <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='inline-block mt-3 px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>Chat on WhatsApp</a>
             <QuoteForm />
           </div>
         </main>

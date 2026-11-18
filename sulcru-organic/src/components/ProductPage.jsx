@@ -1,4 +1,4 @@
-export default function ProductPage({ product }) {
+export default function ProductPage({ product, setShowQuote }) {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
 
@@ -24,9 +24,10 @@ export default function ProductPage({ product }) {
 
             <button
               type="button"
+              onClick={() => setShowQuote(true)}
               className="px-8 py-4 rounded-2xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition"
             >
-              Request a Quote
+  Request a Quote
             </button>
 
             <button

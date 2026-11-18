@@ -26,8 +26,9 @@ const [loading, setLoading] = useState(false);
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 const [selectedProduct, setSelectedProduct] = useState(null);
   
-  const email = 'info@sulcruorganic.co.za';
-  const phone = '+27 61 514 1042';
+const email = 'info@sulcruorganic.co.za';
+const phone = '061 514 1042';
+const whatsappNumber = '27615141042';
 
   const products = [
     {
@@ -446,7 +447,7 @@ const message = form.get('message');
   </div>
 
 </div>
-            <a href={`https://wa.me/${phone}`} target='_blank' rel='noreferrer' className='inline-block mt-3 px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>Chat on WhatsApp</a>
+            <a href={`https://wa.me/${whatsappNumber}`} target='_blank' rel='noreferrer' className='inline-block mt-3 px-6 py-3 rounded-2xl bg-green-500 text-white hover:bg-green-400'>Chat on WhatsApp</a>
             <QuoteForm />
           </div>
         </main>

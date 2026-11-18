@@ -18,8 +18,58 @@ export default function SolutionsPage() {
           to support healthier soils, stronger plant growth,
           productive landscapes and environmental restoration.
         </p>
+      
+      </section>
+
+      <section className="px-6 lg:px-20 pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
+            <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+              DIVISION 01
+            </p>
+            <h2 className="text-3xl font-black mb-5">
+              Agriculture
+            </h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Biological and organic solutions for commercial
+              farming, nurseries, seedling production and
+              sustainable crop development.
+            </p>
+          </div>
+
+          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
+            <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+              DIVISION 02
+            </p>
+            <h2 className="text-3xl font-black mb-5">
+              Landscape & Turf
+            </h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Professional growing and maintenance solutions
+              for landscaping, gardens, golf courses, sports
+              fields and residential estates.
+            </p>
+          </div>
+
+          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
+            <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+              DIVISION 03
+            </p>
+            <h2 className="text-3xl font-black mb-5">
+              Environmental Restoration
+            </h2>
+            <p className="text-zinc-400 leading-relaxed">
+              Biological soil improvement, land rehabilitation
+              and vegetation establishment for restoration
+              and environmental recovery projects.
+            </p>
+          </div>
+
+        </div>
       </section>
 
     </main>
+
   );
 }

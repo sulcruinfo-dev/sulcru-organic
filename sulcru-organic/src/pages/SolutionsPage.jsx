@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 export default function SolutionsPage() {
   return (
@@ -24,8 +25,10 @@ export default function SolutionsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* DIVISION 01 - AGRICULTURE */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
-
+          <Link
+  to="/solutions/agriculture"
+  className="block bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition"
+>
             <img
               src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=85"
               alt="Commercial agricultural crop production"
@@ -48,7 +51,7 @@ export default function SolutionsPage() {
               </p>
             </div>
 
-          </div>
+          </Link>
 
           {/* DIVISION 02 - LANDSCAPE & TURF */}
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">

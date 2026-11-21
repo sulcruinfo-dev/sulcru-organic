@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import SulcruOrganic from './SulcruOrganic';
 import SoilImproverPage from './pages/SoilImproverPage';
 import SolutionsPage from './pages/SolutionsPage';
+import AgriculturePage from './pages/AgriculturePage';
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <Route path="/" element={<SulcruOrganic />} />
       <Route path="/about" element={<SulcruOrganic />} />
       <Route path="/solutions" element={<SolutionsPage />} />
+      <Route path="/solutions/agriculture" element={<AgriculturePage />} />
       <Route path="/products" element={<SulcruOrganic />} />
       <Route path="/products/soil-improver" element={<SoilImproverPage />} />
       <Route path="/product" element={<SulcruOrganic />} />

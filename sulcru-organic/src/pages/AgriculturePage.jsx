@@ -85,9 +85,10 @@ export default function AgriculturePage() {
                 throughout the early stages of production.
               </p>
 
-            </div>
-            </Link>
-          </div>
+                      </div>
+        </div>
+        </Link>
+      </div>
 
           {/* COMMERCIAL FARMING */}
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">

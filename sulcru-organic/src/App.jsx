@@ -8,6 +8,7 @@ import EnvironmentalRestorationPage from './pages/EnvironmentalRestorationPage';
 import NurseryPage from './pages/NurseryPage';
 import SeedlingProductionPage from './pages/SeedlingProductionPage';
 import CommercialFarmingPage from './pages/CommercialFarmingPage';
+import LandscapingGardensPage from './pages/LandscapingGardensPage';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Route path="/solutions/agriculture/seedling-production" element={<SeedlingProductionPage />} />
       <Route path="/solutions/agriculture/commercial-farming" element={<CommercialFarmingPage />} />
       <Route path="/solutions/landscape-turf" element={<LandscapeTurfPage />} />
+      <Route path="/solutions/landscape-turf/landscaping-gardens" element={<LandscapingGardensPage />} />
       <Route path="/solutions/environmental-restoration" element={<EnvironmentalRestorationPage />} />
       <Route path="/products" element={<SulcruOrganic />} />
       <Route path="/products/soil-improver" element={<SoilImproverPage />} />

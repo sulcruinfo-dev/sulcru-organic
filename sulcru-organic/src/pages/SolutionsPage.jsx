@@ -78,7 +78,15 @@ export default function SolutionsPage() {
           </div>
 
           {/* DIVISION 03 - ENVIRONMENTAL RESTORATION */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl p-8 hover:border-yellow-400 transition">
+          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+
+  <img
+    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85"
+    alt="Natural landscape with established vegetation"
+    className="w-full h-56 object-cover"
+  />
+
+  <div className="p-8">
 
             <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
               DIVISION 03
@@ -88,7 +96,7 @@ export default function SolutionsPage() {
               Environmental Restoration
             </h2>
 
-            <p className="text-zinc-400 leading-relaxed">
+    <p className="text-zinc-400 leading-relaxed">
               Biological soil improvement, land rehabilitation
               and vegetation establishment for restoration
               and environmental recovery projects.
@@ -97,6 +105,7 @@ export default function SolutionsPage() {
           </div>
 
         </div>
+      </div>
       </section>
 
     </main>

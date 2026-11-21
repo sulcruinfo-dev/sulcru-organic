@@ -29,7 +29,7 @@ export default function LandscapingGardensPage() {
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-yellow-500/20">
 
           <img
-            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1800&q=85"
+            src="https://www.vszahrady.cz/galerie/zahrady-na-klic---333.jpg"
             alt="Beautiful landscaped garden"
             className="w-full h-[350px] lg:h-[500px] object-cover"
           />

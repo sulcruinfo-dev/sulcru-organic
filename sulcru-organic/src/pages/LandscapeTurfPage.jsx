@@ -64,60 +64,70 @@ export default function LandscapeTurfPage() {
           </Link>
 
           {/* GOLF COURSES */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+            to="/solutions/landscape-turf/golf-courses"
+            className="block"
+          >
+            <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=85"
-              alt="Professionally maintained golf course"
-              className="w-full h-64 object-cover"
-            />
+              <img
+                src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=85"
+                alt="Professionally maintained golf course"
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-8">
+              <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 02
-              </p>
+                <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+                  INDUSTRY 02
+                </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Golf Courses
-              </h2>
+                <h2 className="text-3xl font-black mb-5">
+                  Golf Courses
+                </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Biological turf and soil support solutions
-                designed for golf greens, fairways and
-                high-performance playing surfaces.
-              </p>
+                <p className="text-zinc-400 leading-relaxed">
+                  Biological turf and soil support solutions
+                  designed for golf greens, fairways and
+                  high-performance playing surfaces.
+                </p>
 
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* SPORTS FIELDS */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+            to="/solutions/landscape-turf/sports-fields"
+            className="block"
+          >
+            <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=85"
-              alt="Green sports playing field"
-              className="w-full h-64 object-cover"
-            />
+              <img
+                src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=85"
+                alt="Green sports playing field"
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-8">
+              <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 03
-              </p>
+                <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+                  INDUSTRY 03
+                </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Sports Fields
-              </h2>
+                <h2 className="text-3xl font-black mb-5">
+                  Sports Fields
+                </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Supporting healthy turf, soil condition
-                and sustainable maintenance of sports
-                fields and recreational surfaces.
-              </p>
+                <p className="text-zinc-400 leading-relaxed">
+                  Supporting healthy turf, soil condition
+                  and sustainable maintenance of sports
+                  fields and recreational surfaces.
+                </p>
 
+              </div>
             </div>
-          </div>
+          </Link>
 
           {/* ESTATES & RESIDENTIAL */}
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">

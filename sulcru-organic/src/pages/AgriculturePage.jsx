@@ -73,7 +73,7 @@ export default function AgriculturePage() {
               <img
                 src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85"
                 alt="Young green seedlings and developing plants"
-                className="w-full h-64 object-cover"
+                className="w-full h-64 object-cover hover:border-yellow-400 transition"
               />
 
               <div className="p-8">
@@ -97,32 +97,37 @@ export default function AgriculturePage() {
           </Link>
 
           {/* COMMERCIAL FARMING */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+            to="/solutions/agriculture/commercial-farming"
+            className="block"
+          >
+            <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=85"
-              alt="Commercial agricultural crop production"
-              className="w-full h-64 object-cover"
-            />
+              <img
+                src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=1200&q=85"
+                alt="Commercial agricultural crop production"
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-8">
+              <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 03
-              </p>
+                <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+                  INDUSTRY 03
+                </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Commercial Farming
-              </h2>
+                <h2 className="text-3xl font-black mb-5">
+                  Commercial Farming
+                </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Organic biological solutions supporting soil
-                health, crop development and sustainable
-                agricultural production systems.
-              </p>
+                <p className="text-zinc-400 leading-relaxed">
+                  Organic biological solutions supporting soil
+                  health, crop development and sustainable
+                  agricultural production systems.
+                </p>
 
+              </div>
             </div>
-          </div>
+          </Link>
 
         </div>
 

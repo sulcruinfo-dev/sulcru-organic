@@ -84,7 +84,10 @@ export default function SolutionsPage() {
           </Link>
 
           {/* DIVISION 03 - ENVIRONMENTAL RESTORATION */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+  to="/solutions/environmental-restoration"
+  className="block bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition"
+>
 
   <img
     src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85"
@@ -110,7 +113,7 @@ export default function SolutionsPage() {
 
           </div>
 
-        </div>
+        </Link>
       </div>
       </section>
 

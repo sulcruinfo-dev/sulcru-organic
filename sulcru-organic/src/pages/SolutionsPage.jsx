@@ -54,7 +54,10 @@ export default function SolutionsPage() {
           </Link>
 
           {/* DIVISION 02 - LANDSCAPE & TURF */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+  to="/solutions/landscape-turf"
+  className="block bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition"
+>
 
             <img
               src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=85"
@@ -78,7 +81,7 @@ export default function SolutionsPage() {
               </p>
             </div>
 
-          </div>
+          </Link>
 
           {/* DIVISION 03 - ENVIRONMENTAL RESTORATION */}
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">

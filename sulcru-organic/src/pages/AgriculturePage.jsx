@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 export default function AgriculturePage() {
@@ -30,65 +31,70 @@ export default function AgriculturePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
           {/* NURSERIES */}
-<Link to="/solutions/agriculture/nurseries" className="block">
-<div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+            to="/solutions/agriculture/nurseries"
+            className="block"
+          >
+            <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=85"
-              alt="Healthy plants growing in a commercial nursery"
-              className="w-full h-64 object-cover"
-            />
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=85"
+                alt="Healthy plants growing in a commercial nursery"
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-8">
+              <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 01
-              </p>
+                <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+                  INDUSTRY 01
+                </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Nurseries
-              </h2>
+                <h2 className="text-3xl font-black mb-5">
+                  Nurseries
+                </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Biological growing solutions supporting plant
-                health, root development and vigorous growth
-                in commercial nurseries and garden centres.
-              </p>
+                <p className="text-zinc-400 leading-relaxed">
+                  Biological growing solutions supporting plant
+                  health, root development and vigorous growth
+                  in commercial nurseries and garden centres.
+                </p>
 
+              </div>
             </div>
-          </div>
-</Link>
-          
+          </Link>
+
           {/* SEEDLING PRODUCTION */}
-          <Link to="/solutions/agriculture/seedling-production">
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+          <Link
+            to="/solutions/agriculture/seedling-production"
+            className="block"
+          >
+            <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85"
-              alt="Young green seedlings and developing plants"
-              className="w-full h-64 object-cover"
-            />
+              <img
+                src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85"
+                alt="Young green seedlings and developing plants"
+                className="w-full h-64 object-cover"
+              />
 
-            <div className="p-8">
+              <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 02
-              </p>
+                <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+                  INDUSTRY 02
+                </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Seedling Production
-              </h2>
+                <h2 className="text-3xl font-black mb-5">
+                  Seedling Production
+                </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Supporting healthy seedling establishment,
-                root development and consistent plant growth
-                throughout the early stages of production.
-              </p>
+                <p className="text-zinc-400 leading-relaxed">
+                  Supporting healthy seedling establishment,
+                  root development and consistent plant growth
+                  throughout the early stages of production.
+                </p>
 
-                      </div>
-        </div>
-        </Link>
-      </div>
+              </div>
+            </div>
+          </Link>
 
           {/* COMMERCIAL FARMING */}
           <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">

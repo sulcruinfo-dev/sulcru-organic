@@ -4,6 +4,7 @@ import SoilImproverPage from './pages/SoilImproverPage';
 import SolutionsPage from './pages/SolutionsPage';
 import AgriculturePage from './pages/AgriculturePage';
 import LandscapeTurfPage from './pages/LandscapeTurfPage';
+import EnvironmentalRestorationPage from './pages/EnvironmentalRestorationPage';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/solutions" element={<SolutionsPage />} />
       <Route path="/solutions/agriculture" element={<AgriculturePage />} />
       <Route path="/solutions/landscape-turf" element={<LandscapeTurfPage />} />
+      <Route path="/solutions/environmental-restoration" element={<EnvironmentalRestorationPage />} />
       <Route path="/products" element={<SulcruOrganic />} />
       <Route path="/products/soil-improver" element={<SoilImproverPage />} />
       <Route path="/product" element={<SulcruOrganic />} />

@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 import SulcruOrganic from './SulcruOrganic';
 import BackButton from './components/BackButton';
+import BlackFridayBanner from './components/BlackFridayBanner';
 
 import SoilImproverPage from './pages/SoilImproverPage';
 import SolutionsPage from './pages/SolutionsPage';
@@ -22,9 +23,9 @@ import VegetationEstablishmentPage from './pages/VegetationEstablishmentPage';
 export default function App() {
   return (
     <>
-      <BackButton />
-
-      <Routes>
+  <BlackFridayBanner />
+  <BackButton />
+  <Routes>
         <Route path="/" element={<SulcruOrganic />} />
         <Route path="/about" element={<SulcruOrganic />} />
 

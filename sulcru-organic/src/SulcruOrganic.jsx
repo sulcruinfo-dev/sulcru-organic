@@ -254,7 +254,8 @@ const message = form.get('message');
 
             </div>
           </section>
-
+         
+<BlackFridaySlideshow />
           <Hero navigateTo={navigateTo} />
          
 

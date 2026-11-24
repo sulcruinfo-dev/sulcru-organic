@@ -8,6 +8,7 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import BlackFridaySlideshow from "./components/BlackFridaySlideshow";
 import ProductList from "./components/ProductList";
 import SoilImproverPage from "./pages/SoilImproverPage";
 

@@ -211,6 +211,57 @@ const message = form.get('message');
       {page === 'home' && (
         <main className='overflow-hidden bg-black'>
          <Hero navigateTo={navigateTo} />
+         
+<section className="relative overflow-hidden bg-gradient-to-br from-zinc-950 via-black to-zinc-900 border-y border-yellow-400/30 px-6 py-16 lg:py-20">
+
+  <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <div className="absolute top-0 left-1/4 w-72 h-72 bg-yellow-400 rounded-full blur-[140px]" />
+    <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-yellow-400 rounded-full blur-[140px]" />
+  </div>
+
+  <div className="relative max-w-5xl mx-auto text-center">
+
+    <p className="text-yellow-400 uppercase tracking-[0.35em] text-sm font-bold mb-5">
+      One Day Only · Sulcru Organic
+    </p>
+
+    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white tracking-tight mb-4">
+      BLACK FRIDAY
+    </h2>
+
+    <div className="text-6xl sm:text-7xl lg:text-8xl font-black text-yellow-400 mb-5">
+      30% OFF
+    </div>
+
+    <p className="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto mb-8">
+      A special opportunity to invest in healthier soil,
+      stronger plant growth and sustainable land management.
+    </p>
+
+    <div className="inline-block border border-zinc-700 bg-white/5 px-6 py-4 mb-8">
+      <p className="text-white font-bold tracking-widest">
+        FRIDAY · 27 NOVEMBER 2026
+      </p>
+    </div>
+
+    <p className="text-sm text-zinc-400 mb-2">
+      Payment must be received on the day to qualify.
+    </p>
+
+    <p className="text-sm text-zinc-400 mb-9">
+      Free application guidance included.
+    </p>
+
+    <button
+      onClick={() => navigateTo('contact')}
+      className="inline-block bg-yellow-400 hover:bg-yellow-300 text-black font-extrabold tracking-wider px-9 py-4 transition-all duration-300"
+    >
+      ENQUIRE ABOUT THE SPECIAL
+    </button>
+
+  </div>
+</section>
+
           <section className='px-6 lg:px-20 py-20 bg-gradient-to-b from-black to-zinc-950 border-t border-yellow-500/10'>
             <div className='text-center mb-12'>
               <p className='text-yellow-400 uppercase tracking-[0.3em] text-sm font-semibold mb-4'>Real Agricultural Results</p>

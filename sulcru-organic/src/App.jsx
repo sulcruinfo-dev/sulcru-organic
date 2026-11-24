@@ -11,6 +11,7 @@ import CommercialFarmingPage from './pages/CommercialFarmingPage';
 import LandscapingGardensPage from './pages/LandscapingGardensPage';
 import GolfCoursesPage from './pages/GolfCoursesPage';
 import SportsFieldsPage from './pages/SportsFieldsPage';
+import EstatesResidentialPage from './pages/EstatesResidentialPage';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <Route path="/solutions/landscape-turf/landscaping-gardens" element={<LandscapingGardensPage />} />
       <Route path="/solutions/landscape-turf/golf-courses" element={<GolfCoursesPage />} />
       <Route path="/solutions/landscape-turf/sports-fields" element={<SportsFieldsPage />} />
+      <Route path="/solutions/landscape-turf/estates-residential" element={<EstatesResidentialPage />} />
       <Route path="/solutions/environmental-restoration" element={<EnvironmentalRestorationPage />} />
       <Route path="/products" element={<SulcruOrganic />} />
       <Route path="/products/soil-improver" element={<SoilImproverPage />} />

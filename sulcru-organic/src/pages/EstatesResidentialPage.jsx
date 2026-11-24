@@ -29,8 +29,8 @@ export default function EstatesResidentialPage() {
         <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden border border-yellow-500/20">
 
           <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85"
-            alt="Beautiful residential estate with landscaped grounds"
+            src="/walkersons-hotel-spa.webp"
+            alt="Beautiful Hotel & Spa with landscaped gardens and lawns"
             className="w-full h-[350px] lg:h-[500px] object-cover"
           />
 

@@ -54,9 +54,9 @@ export default function BlackFridaySlideshow() {
   }, []);
 
   return (
-    <section className="bg-black px-4 py-14 lg:px-12">
+    <section className="bg-black px-4 py-8 lg:px-8">
 
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-[650px] mx-auto text-center">
 
         <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold mb-3">
           Sulcru Organic · Black Friday 2026

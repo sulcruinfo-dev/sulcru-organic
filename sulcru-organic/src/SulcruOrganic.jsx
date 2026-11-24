@@ -4,6 +4,7 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaWhatsapp } from "react-icons/fa";
+import FloatingCallButton from './components/FloatingCallButton';
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -617,6 +618,7 @@ const message = form.get('message');
     </div>
   </div>
 )}
+<FloatingCallButton />    
 <FloatingWhatsApp />
 </>
 ); 

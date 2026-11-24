@@ -47,75 +47,116 @@ export default function BlackFridaySlideshow() {
     );
   };
 
+  // Automatic slideshow
   useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(() => {
+      setActiveSlide((current) => (current + 1) % slides.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      const tag = event.target.tagName;
+
+      if (
+        tag === 'INPUT' ||
+        tag === 'TEXTAREA' ||
+        event.target.isContentEditable
+      ) {
+        return;
+      }
+
+      if (event.key === 'ArrowRight') {
+        setActiveSlide((current) => (current + 1) % slides.length);
+      }
+
+      if (event.key === 'ArrowLeft') {
+        setActiveSlide((current) =>
+          (current - 1 + slides.length) % slides.length
+        );
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
-    <section className="bg-black px-4 py-8 lg:px-8">
+    <section className="bg-black px-3 py-8 lg:px-8">
 
-      <div className="max-w-[650px] mx-auto text-center">
+      <div className="max-w-[760px] mx-auto text-center">
 
-        <p className="text-yellow-400 uppercase tracking-[0.3em] text-sm font-bold mb-3">
+        <p className="text-yellow-400 uppercase tracking-[0.3em] text-xs sm:text-sm font-bold mb-3">
           Sulcru Organic · Black Friday 2026
         </p>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-4">
+        <h2 className="text-3xl sm:text-4xl font-black text-white mb-3">
           Explore Our Special Offers
         </h2>
 
-        <p className="text-zinc-400 mb-8">
+        <p className="text-zinc-400 text-sm sm:text-base mb-7">
           Discover our limited Black Friday bundles across different industries.
         </p>
 
-        <div className="relative overflow-hidden rounded-2xl border border-yellow-400/40 bg-zinc-950">
-
-          <button
-            type="button"
-            onClick={() => navigate('/contact')}
-            className="block w-full"
-            aria-label={`Enquire about ${slides[activeSlide].title}`}
-          >
-            <img
-              src={slides[activeSlide].image}
-              alt={slides[activeSlide].title}
-              className="w-full h-auto object-contain"
-            />
-          </button>
+        {/* SLIDESHOW WITH OUTSIDE ARROWS */}
+        <div className="flex items-center justify-center gap-2 sm:gap-4">
 
           <button
             type="button"
             onClick={previousSlide}
             aria-label="Previous slide"
-            className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/75 text-yellow-400 w-11 h-11 rounded-full text-2xl hover:bg-yellow-400 hover:text-black transition"
+            className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-yellow-400 text-yellow-400 text-3xl flex items-center justify-center hover:bg-yellow-400 hover:text-black transition"
           >
             ‹
           </button>
+
+          <div className="flex-1 min-w-0 overflow-hidden rounded-xl border border-yellow-400/40 bg-zinc-950">
+
+            <button
+              type="button"
+              onClick={() => navigate('/contact')}
+              className="block w-full"
+              aria-label={`Enquire about ${slides[activeSlide].title}`}
+            >
+              <img
+                src={slides[activeSlide].image}
+                alt={slides[activeSlide].title}
+                className="block w-full h-auto object-contain"
+              />
+            </button>
+
+          </div>
 
           <button
             type="button"
             onClick={nextSlide}
             aria-label="Next slide"
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/75 text-yellow-400 w-11 h-11 rounded-full text-2xl hover:bg-yellow-400 hover:text-black transition"
+            className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-yellow-400 text-yellow-400 text-3xl flex items-center justify-center hover:bg-yellow-400 hover:text-black transition"
           >
             ›
           </button>
 
         </div>
 
-        <p className="text-yellow-400 font-semibold mt-5">
+        <p className="text-yellow-400 font-semibold text-sm sm:text-base mt-4">
           {slides[activeSlide].title}
         </p>
 
-        <div className="flex justify-center gap-2 mt-5">
+        {/* SLIDE INDICATORS */}
+        <div className="flex justify-center gap-2 mt-4">
           {slides.map((slide, index) => (
             <button
               key={slide.image}
               type="button"
               onClick={() => setActiveSlide(index)}
               aria-label={`Show slide ${index + 1}`}
+              aria-current={activeSlide === index ? 'true' : undefined}
               className={`h-3 rounded-full transition-all ${
                 activeSlide === index
                   ? 'w-8 bg-yellow-400'
@@ -126,7 +167,7 @@ export default function BlackFridaySlideshow() {
         </div>
 
         <p className="text-zinc-500 text-xs mt-4">
-          Select a poster to enquire about the offer.
+          Use the arrows, keyboard or dots to explore our offers.
         </p>
 
       </div>

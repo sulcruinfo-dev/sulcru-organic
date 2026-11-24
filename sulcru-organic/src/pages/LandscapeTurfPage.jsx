@@ -130,33 +130,37 @@ export default function LandscapeTurfPage() {
           </Link>
 
           {/* ESTATES & RESIDENTIAL */}
-          <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
+<Link
+  to="/solutions/landscape-turf/estates-residential"
+  className="block"
+>
+  <div className="bg-zinc-950 border border-yellow-500/20 rounded-3xl overflow-hidden hover:border-yellow-400 transition">
 
-            <img
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85"
-              alt="Beautiful residential estate and landscaped grounds"
-              className="w-full h-64 object-cover"
-            />
+    <img
+      src="/walkersons-hotel-spa.webp"
+      alt="Walkersons Hotel & Spa with landscaped gardens and lawns"
+      className="w-full h-64 object-cover"
+    />
 
-            <div className="p-8">
+    <div className="p-8">
 
-              <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
-                INDUSTRY 04
-              </p>
+      <p className="text-yellow-400 text-sm font-semibold tracking-widest mb-4">
+        INDUSTRY 04
+      </p>
 
-              <h2 className="text-3xl font-black mb-5">
-                Estates & Residential
-              </h2>
+      <h2 className="text-3xl font-black mb-5">
+        Estates & Residential
+      </h2>
 
-              <p className="text-zinc-400 leading-relaxed">
-                Organic solutions for residential estates,
-                communal gardens, lawns and professionally
-                maintained outdoor environments.
-              </p>
+      <p className="text-zinc-400 leading-relaxed">
+        Organic solutions for residential estates,
+        communal gardens, lawns and professionally
+        maintained outdoor environments.
+      </p>
 
-            </div>
-          </div>
-
+    </div>
+  </div>
+</Link>
         </div>
 
       </section>

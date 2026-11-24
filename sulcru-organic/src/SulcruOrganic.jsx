@@ -251,7 +251,7 @@ const message = form.get('message');
         </p>
 
         <button
-          onClick={() => navigateTo('contact')}
+          onClick={() => setShowQuote(true)}
           className="inline-block bg-black hover:bg-zinc-800 text-[#FFFF00] font-extrabold tracking-wider px-6 py-4 text-sm sm:text-base transition-all duration-300"
         >
           ENQUIRE ABOUT THE SPECIAL

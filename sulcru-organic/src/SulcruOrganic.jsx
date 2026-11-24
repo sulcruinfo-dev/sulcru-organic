@@ -522,6 +522,7 @@ const message = form.get('message');
             <div className='flex flex-col gap-6 text-lg uppercase font-semibold'>
               <button onClick={() => {navigateTo('home'); setMobileMenuOpen(false);}}>Home</button>
               <button onClick={() => {navigateTo('about'); setMobileMenuOpen(false);}}>About Us</button>
+             <button onClick={() => {navigateTo('solutions'); setMobileMenuOpen(false);}}>Solutions</button>
               <button onClick={() => {navigateTo('products'); setMobileMenuOpen(false);}}>Shop</button>
               <button onClick={() => {navigateTo('ingredients'); setMobileMenuOpen(false);}}>Ingredients</button>
               <button onClick={() => {navigateTo('benefits'); setMobileMenuOpen(false);}}>Benefits</button>

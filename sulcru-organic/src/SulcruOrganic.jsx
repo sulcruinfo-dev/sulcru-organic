@@ -211,51 +211,63 @@ const message = form.get('message');
 
       {page === 'home' && (
         <main className='overflow-hidden bg-black'>
-         <section className="relative overflow-hidden bg-[#FFFF00] px-6 py-16 lg:py-24">
-            <div className="max-w-5xl mx-auto text-center">
-
-              <p className="text-black uppercase tracking-[0.35em] text-sm font-bold mb-5">
-                One Day Only · Sulcru Organic
-              </p>
-
-              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-black tracking-tight mb-4">
-                BLACK FRIDAY
-              </h2>
-
-              <div className="text-6xl sm:text-7xl lg:text-8xl font-black text-black mb-5">
-                30% OFF
-              </div>
-
-              <p className="text-lg sm:text-xl text-black max-w-2xl mx-auto mb-8">
-                A special opportunity to invest in healthier soil,
-                stronger plant growth and sustainable land management.
-              </p>
-
-              <div className="inline-block border-2 border-black px-6 py-4 mb-8">
-                <p className="text-black font-extrabold tracking-widest">
-                  FRIDAY · 27 NOVEMBER 2026
-                </p>
-              </div>
-
-              <p className="text-sm text-black mb-2">
-                Payment must be received on the day to qualify.
-              </p>
-
-              <p className="text-sm text-black mb-9">
-                Free application guidance included.
-              </p>
-
-              <button
-                onClick={() => navigateTo('contact')}
-                className="inline-block bg-black hover:bg-zinc-800 text-[#FFFF00] font-extrabold tracking-wider px-9 py-4 transition-all duration-300"
-              >
-                ENQUIRE ABOUT THE SPECIAL
-              </button>
-
-            </div>
-          </section>
          
-<BlackFridaySlideshow />
+<div className="bg-black px-4 py-8 lg:px-8 lg:py-12">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-6 lg:gap-8 items-center">
+
+    {/* BLACK FRIDAY PROMOTION - LEFT */}
+    <section className="relative overflow-hidden bg-[#FFFF00] px-5 py-10 sm:px-8 sm:py-14 lg:py-16 rounded-sm">
+      <div className="max-w-5xl mx-auto text-center">
+
+        <p className="text-black uppercase tracking-[0.35em] text-xs sm:text-sm font-bold mb-5">
+          One Day Only · Sulcru Organic
+        </p>
+
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black tracking-tight mb-4">
+          BLACK FRIDAY
+        </h2>
+
+        <div className="text-6xl sm:text-7xl lg:text-7xl font-black text-black mb-5">
+          30% OFF
+        </div>
+
+        <p className="text-base sm:text-lg text-black max-w-2xl mx-auto mb-8">
+          A special opportunity to invest in healthier soil,
+          stronger plant growth and sustainable land management.
+        </p>
+
+        <div className="inline-block border-2 border-black px-5 py-4 mb-8">
+          <p className="text-black font-extrabold tracking-widest text-sm sm:text-base">
+            FRIDAY · 27 NOVEMBER 2026
+          </p>
+        </div>
+
+        <p className="text-sm text-black mb-2">
+          Payment must be received on the day to qualify.
+        </p>
+
+        <p className="text-sm text-black mb-9">
+          Free application guidance included.
+        </p>
+
+        <button
+          onClick={() => navigateTo('contact')}
+          className="inline-block bg-black hover:bg-zinc-800 text-[#FFFF00] font-extrabold tracking-wider px-6 py-4 text-sm sm:text-base transition-all duration-300"
+        >
+          ENQUIRE ABOUT THE SPECIAL
+        </button>
+
+      </div>
+    </section>
+
+    {/* BLACK FRIDAY SLIDESHOW - RIGHT */}
+    <div className="min-w-0">
+      <BlackFridaySlideshow />
+    </div>
+
+  </div>
+</div>
+
           <Hero navigateTo={navigateTo} />
          
 
